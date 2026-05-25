@@ -591,7 +591,30 @@ footer {
 </style>
 </head>
 <body>
+<script>
+const USER = "quimfa2026";
+const PASS = "arvi2026";
 
+const u = prompt("Usuario:");
+const p = prompt("Contraseña:");
+
+if (u !== USER || p !== PASS) {
+    document.body.innerHTML = `
+        <div style="
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            flex-direction:column;
+            font-family:Arial;
+            background:#f4f4f4;
+        ">
+            <h1 style="color:#0D2359;">Acceso denegado</h1>
+        </div>
+    `;
+    throw new Error("Acceso denegado");
+}
+</script>
 <div class="topbar">
   <div class="topbar-left">
     <div class="topbar-logo">
