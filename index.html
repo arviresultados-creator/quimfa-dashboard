@@ -58,7 +58,99 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* ── TOPBAR — Enterprise white bar ─────────────────────── */
+/* ── TOMA BADGES ────────────────────────────────────────── */
+.badge-t01 {
+  display: inline-block;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 2px 5px;
+  border-radius: 3px;
+  background: var(--q-navy);
+  color: #fff;
+  margin-left: 5px;
+  vertical-align: middle;
+}
+.badge-t02 {
+  display: inline-block;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 2px 5px;
+  border-radius: 3px;
+  background: var(--q-sky);
+  color: #fff;
+  margin-left: 5px;
+  vertical-align: middle;
+}
+.badge-both {
+  display: inline-block;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 2px 5px;
+  border-radius: 3px;
+  background: var(--q-purple);
+  color: #fff;
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
+
+.mercado-tabla-wrap {
+  margin: 20px 0 24px;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+.mercado-tabla-title {
+  text-align: center;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: var(--tx-m);
+  margin-bottom: 10px;
+}
+.mercado-tabla {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+}
+.mercado-tabla thead th {
+  background: #EEF2FF;
+  color: var(--q-navy);
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+  padding: 10px 16px;
+  border-bottom: 2px solid var(--border);
+  border-right: 1px solid var(--border);
+}
+.mercado-tabla thead th:first-child { background: transparent; }
+.mercado-tabla tbody td {
+  text-align: center;
+  padding: 14px 16px;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--q-sky);
+  border-right: 1px solid var(--border-l);
+}
+.mercado-tabla tbody td.mercado-row-lbl {
+  background: #EEF2FF;
+  color: var(--q-navy);
+  font-size: 13px;
+  font-weight: 600;
+  text-align: left;
+  width: 110px;
+}
+
+
 /* CHANGE: was dark navy, now clean white enterprise style */
 .topbar {
   background: #FFFFFF;
@@ -682,9 +774,9 @@ if (u !== USER || p !== PASS) {
 <div class="kpi-sub">7 locales · Módulo B</div>
 </div>
 <div class="kpi">
-<div class="kpi-lbl">Clientes / día (total)</div>
-<div class="kpi-val">7.5<sup>k</sup></div>
-<div class="kpi-sub">Estimación CDE · Módulo C</div>
+<div class="kpi-lbl">Compraron en local</div>
+<div class="kpi-val">284</div>
+<div class="kpi-sub">98.3% tasa de compra</div>
 </div>
 <div class="kpi accent">
 <div class="kpi-lbl">Locales Relevados</div>
@@ -693,31 +785,21 @@ if (u !== USER || p !== PASS) {
 </div>
 <div class="kpi gold">
 <div class="kpi-lbl">Mercado Estimado</div>
-<div class="kpi-val">730<sup>k</sup></div>
+<div class="kpi-val">234<sup>k</sup></div>
 <div class="kpi-sub">Cajas / mes · CDE</div>
 </div>
 <div class="kpi">
 <div class="kpi-lbl">Precio Promedio</div>
-<div class="kpi-val">USD 82</div>
+<div class="kpi-val">USD 85</div>
 <div class="kpi-sub">Por caja · Toma I</div>
 </div>
 </div>
-<div class="big-numbers">
-<div class="bn b1">
-<div class="bn-src">Módulo C · Extrapolación CDE</div>
-<div class="bn-val sky">730k</div>
-<div class="bn-desc">Cajas / mes estimadas en CDE</div>
-</div>
-<div class="bn b2">
-<div class="bn-src">Módulo C · Ingresos Mensuales</div>
-<div class="bn-val navy">USD 62M</div>
-<div class="bn-desc">Facturación mensual estimada · CDE</div>
-</div>
-<div class="bn b3">
-<div class="bn-src">Módulo C · Clientes por Mes</div>
-<div class="bn-val purple">180k</div>
-<div class="bn-desc">Clientes / mes estimados · CDE</div>
-</div>
+<div class="mercado-tabla-wrap">
+<div class="mercado-tabla-title">MOVIMIENTO MENSUAL ESTIMADO DEL MERCADO EN CDE · SEGÚN CATEGORÍAS · <span style="text-decoration:underline;">MEDIA</span></div>
+<table class="mercado-tabla">
+<thead><tr><th></th><th>Volumen de ventas (cajas)</th><th>Facturación (USD)</th><th>Cantidad de Clientes</th></tr></thead>
+<tbody><tr><td class="mercado-row-lbl">Mensual</td><td>730k</td><td>62M</td><td>180K</td></tr></tbody>
+</table>
 </div>
 <div class="g2">
 <div class="card">
@@ -765,17 +847,17 @@ if (u !== USER || p !== PASS) {
 </div>
 <div class="kpi accent">
 <div class="kpi-lbl">Compraron para uso propio</div>
-<div class="kpi-val">78.5%</div>
+<div class="kpi-val">73%</div>
 <div class="kpi-sub">Consumidor final directo</div>
 </div>
 <div class="kpi">
 <div class="kpi-lbl">1er Factor Decisión</div>
-<div class="kpi-val">56.7%</div>
+<div class="kpi-val">55%</div>
 <div class="kpi-sub">Resultados pérdida de peso</div>
 </div>
 <div class="kpi">
 <div class="kpi-lbl">Percepción Precio</div>
-<div class="kpi-val">49.1%</div>
+<div class="kpi-val">50%</div>
 <div class="kpi-sub">Considera precio "Adecuado"</div>
 </div>
 </div>
@@ -826,17 +908,17 @@ if (u !== USER || p !== PASS) {
 <div class="kpi accent">
 <div class="kpi-lbl">#1 Marca (compra)</div>
 <div class="kpi-val">T.G.</div>
-<div class="kpi-sub">35.3% · 102 compras</div>
+<div class="kpi-sub">35.9% del mercado declarado</div>
 </div>
 <div class="kpi">
 <div class="kpi-lbl">#2 Marca</div>
 <div class="kpi-val">Lipoless</div>
-<div class="kpi-sub">31.5% · 91 compras</div>
+<div class="kpi-sub">32.0% · 91 compras</div>
 </div>
 <div class="kpi gold">
 <div class="kpi-lbl">Posición Tirzec</div>
 <div class="kpi-val">#3</div>
-<div class="kpi-sub">20.1% · 58 compras</div>
+<div class="kpi-sub">20.4% · 58 compras</div>
 </div>
 </div>
 <div class="g2">
@@ -878,8 +960,8 @@ if (u !== USER || p !== PASS) {
 </div>
 <div class="kpi accent">
 <div class="kpi-lbl">Precio más alto (local)</div>
-<div class="kpi-val">USD 90</div>
-<div class="kpi-sub">Cellshop · Farm. Triunfo</div>
+<div class="kpi-val">USD 88</div>
+<div class="kpi-sub">Cellshop</div>
 </div>
 <div class="kpi gold">
 <div class="kpi-lbl">Precio más alto (marca)</div>
@@ -959,34 +1041,35 @@ if (u !== USER || p !== PASS) {
 <section class="section sub-panorama active" id="sec-panorama-t2">
 <div class="sec-head"><h2>Panorama General del Mercado (Toma II)</h2><p>Indicadores clave — Toma II · CDE · Marzo 2026 · Datos actualizados</p></div>
 <div class="kpi-strip">
-<div class="kpi"><div class="kpi-lbl">Clientes Encuestados</div><div class="kpi-val">66</div><div class="kpi-sub">6 locales · Módulo B · parcial</div></div>
-<div class="kpi"><div class="kpi-lbl">Meta encuestas</div><div class="kpi-val">22%</div><div class="kpi-sub">66 / 300 encuestas completadas</div></div>
-<div class="kpi accent"><div class="kpi-lbl">Locales activos</div><div class="kpi-val">6</div><div class="kpi-sub">de 7 · Farma Util pendiente</div></div>
-<div class="kpi gold"><div class="kpi-lbl">M1 relevados</div><div class="kpi-val">2<span style="font-size:14px;font-weight:500"> / 7</span></div><div class="kpi-sub">Cell Shopp · Farma Shop Dior</div></div>
-<div class="kpi"><div class="kpi-lbl">Precio Promedio T2</div><div class="kpi-val">USD 80</div><div class="kpi-sub">Por caja · n=50 resp. en USD</div></div>
+<div class="kpi"><div class="kpi-lbl">Clientes Encuestados "Efectivas-Comprador"</div><div class="kpi-val">172</div><div class="kpi-sub">7 locales · Módulo B</div></div>
+<div class="kpi"><div class="kpi-lbl">Compraron en local</div><div class="kpi-val">172</div><div class="kpi-sub">100% tasa de compra</div></div>
+<div class="kpi accent"><div class="kpi-lbl">Locales Relevados</div><div class="kpi-val">7</div><div class="kpi-sub">Cobertura total CDE</div></div>
+<div class="kpi gold"><div class="kpi-lbl">Mercado Estimado</div><div class="kpi-val">31<sup>k</sup></div><div class="kpi-sub">Cajas / mes · CDE</div></div>
+<div class="kpi"><div class="kpi-lbl">Precio Promedio</div><div class="kpi-val">USD 80.8</div><div class="kpi-sub">Por caja · Toma II</div></div>
 </div>
-<div class="big-numbers">
-<div class="bn b1"><div class="bn-src">Módulo C · Extrapolación CDE (2 locales)</div><div class="bn-val sky">31k</div><div class="bn-desc">Cajas / mes estimadas · CDE parcial</div></div>
-<div class="bn b2"><div class="bn-src">Módulo C · Ingresos Mensuales</div><div class="bn-val navy">USD 2.5M</div><div class="bn-desc">Facturación mensual estimada · CDE parcial</div></div>
-<div class="bn b3"><div class="bn-src">Módulo C · Clientes por Mes</div><div class="bn-val purple">2640</div><div class="bn-desc">Clientes / mes estimados · CDE</div></div>
-</div>
-
-<div class="g2">
-<div class="card"><div class="card-head"><div class="card-title">Motivo Principal de Compra</div><div class="card-sub">Respuesta espontánea · N=66</div></div><div class="chart-wrap" style="height:300px;"><canvas id="cMotivoT2"></canvas></div></div>
-<div class="card"><div class="card-head"><div class="card-title">Nacionalidad de Clientes</div><div class="card-sub">Procedencia · N=66</div></div><div class="chart-wrap" style="height:300px;"><canvas id="cNacT2"></canvas></div></div>
+<div class="mercado-tabla-wrap">
+<div class="mercado-tabla-title">MOVIMIENTO MENSUAL ESTIMADO DEL MERCADO EN CDE · SEGÚN CATEGORÍAS · <span style="text-decoration:underline;">MEDIA</span></div>
+<table class="mercado-tabla">
+<thead><tr><th></th><th>Volumen de ventas (cajas)</th><th>Facturación (USD)</th><th>Cantidad de Clientes</th></tr></thead>
+<tbody><tr><td class="mercado-row-lbl">Mensual</td><td>93.2k</td><td>USD 7.93M</td><td>8.7K</td></tr></tbody>
+</table>
 </div>
 <div class="g2">
-<div class="card"><div class="card-head"><div class="card-title">Distribución por Sexo</div><div class="card-sub">Módulo B · N=66</div></div><div class="chart-wrap" style="height:260px;"><canvas id="cSexoT2"></canvas></div></div>
-<div class="card"><div class="card-head"><div class="card-title">Frecuencia de Compra</div><div class="card-sub">Patrón de recompra · N=66</div></div><div class="chart-wrap" style="height:260px;"><canvas id="cFrecT2"></canvas></div></div>
+<div class="card"><div class="card-head"><div class="card-title">Motivo Principal de Compra</div><div class="card-sub">Respuesta espontánea · N=172</div></div><div class="chart-wrap" style="height:300px;"><canvas id="cMotivoT2"></canvas></div></div>
+<div class="card"><div class="card-head"><div class="card-title">Nacionalidad de Clientes</div><div class="card-sub">Procedencia · N=172</div></div><div class="chart-wrap" style="height:300px;"><canvas id="cNacT2"></canvas></div></div>
+</div>
+<div class="g2">
+<div class="card"><div class="card-head"><div class="card-title">Distribución por Sexo</div><div class="card-sub">Módulo B · N=172</div></div><div class="chart-wrap" style="height:260px;"><canvas id="cSexoT2"></canvas></div></div>
+<div class="card"><div class="card-head"><div class="card-title">Frecuencia de Compra</div><div class="card-sub">Patrón de recompra · N=172</div></div><div class="chart-wrap" style="height:260px;"><canvas id="cFrecT2"></canvas></div></div>
 </div>
 </section>
 <section class="section sub-clientes" id="sec-clientes-t2">
-<div class="sec-head"><h2>Clientes &amp; Comportamiento (Toma II)</h2><p>Decisión de compra, recomendación y percepción de valor · N=66</p></div>
+<div class="sec-head"><h2>Clientes &amp; Comportamiento (Toma II)</h2><p>Decisión de compra, recomendación y percepción de valor · N=172</p></div>
 <div class="kpi-strip" style="grid-template-columns:repeat(4,1fr);">
-<div class="kpi"><div class="kpi-lbl">Edad Promedio</div><div class="kpi-val">38.5</div><div class="kpi-sub">años · Módulo B</div></div>
-<div class="kpi accent"><div class="kpi-lbl">Uso propio</div><div class="kpi-val">68.2%</div><div class="kpi-sub">Consumidor final directo</div></div>
+<div class="kpi"><div class="kpi-lbl">Edad Promedio</div><div class="kpi-val">39.3</div><div class="kpi-sub">años · Módulo B</div></div>
+<div class="kpi accent"><div class="kpi-lbl">Uso propio</div><div class="kpi-val">66.1%</div><div class="kpi-sub">Consumidor final directo</div></div>
 <div class="kpi"><div class="kpi-lbl">1er Factor Decisión</div><div class="kpi-val">66.7%</div><div class="kpi-sub">Resultados para bajar de peso</div></div>
-<div class="kpi"><div class="kpi-lbl">Precio Adecuado</div><div class="kpi-val">66.7%</div><div class="kpi-sub">Percepción principal</div></div>
+<div class="kpi"><div class="kpi-lbl">Precio Adecuado</div><div class="kpi-val">63.6%</div><div class="kpi-sub">Percepción principal</div></div>
 </div>
 <div class="g2">
 <div class="card"><div class="card-head"><div class="card-title">Factor Decisivo de Compra</div><div class="card-sub">Principal motivador declarado</div></div><div class="chart-wrap" style="height:280px;"><canvas id="cFactorT2"></canvas></div></div>
@@ -998,32 +1081,32 @@ if (u !== USER || p !== PASS) {
 </div>
 </section>
 <section class="section sub-marcas" id="sec-marcas-t2">
-<div class="sec-head"><h2>Marcas &amp; Competencia (Toma II)</h2><p>Market share de compra declarada y cajas mensuales desde Módulo C · N=66</p></div>
+<div class="sec-head"><h2>Marcas &amp; Competencia (Toma II)</h2><p>Market share de compra declarada y cajas mensuales desde Módulo C · N=172</p></div>
 <div class="kpi-strip" style="grid-template-columns:repeat(4,1fr);">
-<div class="kpi"><div class="kpi-lbl">Marcas Relevadas</div><div class="kpi-val">5</div><div class="kpi-sub">Módulo B</div></div>
-<div class="kpi accent"><div class="kpi-lbl">#1 Marca</div><div class="kpi-val">Lipoless</div><div class="kpi-sub">36.4% · 24 compras</div></div>
-<div class="kpi"><div class="kpi-lbl">#2 Marca</div><div class="kpi-val">T.G.</div><div class="kpi-sub">33.3% · 22 compras</div></div>
-<div class="kpi gold"><div class="kpi-lbl">Posición Tirzec</div><div class="kpi-val">#3</div><div class="kpi-sub">19.7% · 13 compras</div></div>
+<div class="kpi"><div class="kpi-lbl">Marcas Relevadas</div><div class="kpi-val">7</div><div class="kpi-sub">Módulo B</div></div>
+<div class="kpi accent"><div class="kpi-lbl">#1 Marca</div><div class="kpi-val">T.G.</div><div class="kpi-sub">42.4% · 70 compras</div></div>
+<div class="kpi"><div class="kpi-lbl">#2 Marca</div><div class="kpi-val">Lipoless</div><div class="kpi-sub">25.5% · 42 compras</div></div>
+<div class="kpi gold"><div class="kpi-lbl">Posición Tirzec</div><div class="kpi-val">#3</div><div class="kpi-sub">23.6% · 39 compras</div></div>
 </div>
 <div class="g2">
-<div class="card"><div class="card-head"><div class="card-title">Market Share — Compra Declarada</div><div class="card-sub">Distribución por marca · N=66</div></div><div class="chart-wrap" style="height:320px;"><canvas id="cMarcaShareT2"></canvas></div></div>
+<div class="card"><div class="card-head"><div class="card-title">Market Share — Compra Declarada</div><div class="card-sub">Distribución por marca · N=172</div></div><div class="chart-wrap" style="height:320px;"><canvas id="cMarcaShareT2"></canvas></div></div>
 <div class="card"><div class="card-head"><div class="card-title">Cajas/Mes por Marca</div><div class="card-sub">Módulo C integrado · reporte B consolidado</div></div><div class="chart-wrap" style="height:320px;"><canvas id="cCajasT2"></canvas></div></div>
 </div>
 <div class="card"><div class="card-head"><div class="card-title">Ranking Detallado de Marcas</div><div class="card-sub">Compras declaradas Módulo B · participación actualizada</div></div><div style="margin-top:8px;"><div class="rank-list" id="rankMarcasT2"></div></div></div>
 </section>
 <section class="section sub-precios" id="sec-precios-t2">
-<div class="sec-head"><h2>Análisis de Precios (Toma II)</h2><p>Medianas y promedios en USD · N=66</p></div>
+<div class="sec-head"><h2>Análisis de Precios (Toma II)</h2><p>Medianas y promedios en USD · N=172</p></div>
 <div class="kpi-strip" style="grid-template-columns:repeat(4,1fr);">
-<div class="kpi"><div class="kpi-lbl">Precio Promedio T2</div><div class="kpi-val">USD 80</div><div class="kpi-sub">n=50 respuestas en USD</div></div>
-<div class="kpi accent"><div class="kpi-lbl">Precio más alto (local)</div><div class="kpi-val">USD 120</div><div class="kpi-sub">Farmashop Dior</div></div>
-<div class="kpi gold"><div class="kpi-lbl">Precio más bajo (local)</div><div class="kpi-val">USD 76</div><div class="kpi-sub">Farmacia Columbia T2</div></div>
-<div class="kpi"><div class="kpi-lbl">Rango</div><div class="kpi-val">60–120</div><div class="kpi-sub">USD por caja · Toma II</div></div>
+<div class="kpi"><div class="kpi-lbl">Precio Promedio</div><div class="kpi-val">USD 80.8</div><div class="kpi-sub">Promedio general</div></div>
+<div class="kpi accent"><div class="kpi-lbl">Precio más alto (local)</div><div class="kpi-val">USD 120</div><div class="kpi-sub">Farma Shop Dior</div></div>
+<div class="kpi gold"><div class="kpi-lbl">Precio más alto (marca)</div><div class="kpi-val">USD 85.6</div><div class="kpi-sub">Tirzedral · promedio</div></div>
+<div class="kpi"><div class="kpi-lbl">Precio más bajo (marca)</div><div class="kpi-val">USD 76.0</div><div class="kpi-sub">Lipoless · promedio</div></div>
 </div>
 <div class="g2">
 <div class="card"><div class="card-head"><div class="card-title">Precio Mediano por Local (USD)</div><div class="card-sub">Precio pagado declarado · conversión estandarizada</div></div><div id="precioLocalBarsT2" style="margin-top:12px;"></div></div>
 <div class="card"><div class="card-head"><div class="card-title">Precio Mediano por Marca (USD)</div><div class="card-sub">Ticket mediano declarado por producto</div></div><div id="precioMarcaBarsT2" style="margin-top:12px;"></div></div>
 </div>
-<div class="card"><div class="card-head"><div class="card-title">Percepción de Precio</div><div class="card-sub">Distribución de valoración precio-calidad · N=66</div></div><div class="chart-wrap" style="height:280px;"><canvas id="cPrecioDetalleT2"></canvas></div></div>
+<div class="card"><div class="card-head"><div class="card-title">Percepción de Precio</div><div class="card-sub">Distribución de valoración precio-calidad · N=172</div></div><div class="chart-wrap" style="height:280px;"><canvas id="cPrecioDetalleT2"></canvas></div></div>
 </section>
 <section class="section sub-locales" id="sec-locales-t2">
 <div class="sec-head"><h2>Análisis por Local (Toma II)</h2><p>Datos actualizados por local · Módulos B y C integrados</p></div>
@@ -1035,27 +1118,13 @@ if (u !== USER || p !== PASS) {
 </section>
 </div>
 <section class="section" id="sec-metodologia" style="padding: 0 48px;">
-<div class="sec-head"><h2>Estado de Recolección — Toma II</h2><p>Avance por módulo y local · Mayo 2026</p></div>
-<div class="banner"><div class="banner-text"><strong>Toma II en recolección.</strong> 66/300 encuestas completadas (22%) · 2/7 informantes clave (Módulo A) · Módulo C actualizado con 2 locales.</div></div>
-<div class="big-numbers">
-<div class="bn b1"><div class="bn-src">Módulo A · Informantes clave</div><div class="bn-val sky">2 / 7</div><div class="bn-desc">Cell Shopp · Farma Shop Dior</div></div>
-<div class="bn b2"><div class="bn-src">Módulo B · Encuestas clientes</div><div class="bn-val navy">66 / 300</div><div class="bn-desc">22% completado · 6 locales activos</div></div>
-<div class="bn b3"><div class="bn-src">Módulo C · Cajas/mes CDE</div><div class="bn-val purple">89k</div><div class="bn-desc">Extrapolación parcial · 2 locales M1</div></div>
-</div>
-<div class="data-table-wrap" style="margin-bottom:20px;">
-<table class="data-table">
-<thead><tr><th>Local</th><th class="right">Mod. A</th><th class="right">Mod. B (enc.)</th><th class="right">Meta B</th><th class="right">Cajas/Mes</th><th class="right">Estado</th></tr></thead>
-<tbody>
-<tr><td class="name">Cell Shopp T2</td><td class="right"><span class="badge ok">✓</span></td><td class="right num">8</td><td class="right num">50</td><td class="right num">28,800</td><td class="right"><span class="badge warn">M1 completo</span></td></tr>
-<tr><td class="name">Farmashop Dior</td><td class="right"><span class="badge ok">✓</span></td><td class="right num">11</td><td class="right num">50</td><td class="right num">2,280</td><td class="right"><span class="badge warn">M1 completo</span></td></tr>
-<tr><td class="name">Farmacia Columbia T2</td><td class="right"><span class="badge pending">—</span></td><td class="right num">14</td><td class="right num">50</td><td class="right num">—</td><td class="right"><span class="badge pending">M1 pendiente</span></td></tr>
-<tr><td class="name">FarmaCon</td><td class="right"><span class="badge pending">—</span></td><td class="right num">15</td><td class="right num">50</td><td class="right num">—</td><td class="right"><span class="badge pending">M1 pendiente</span></td></tr>
-<tr><td class="name">iClinic</td><td class="right"><span class="badge pending">—</span></td><td class="right num">14</td><td class="right num">50</td><td class="right num">—</td><td class="right"><span class="badge pending">M1 pendiente</span></td></tr>
-<tr><td class="name">Farmacia Triunfo T2</td><td class="right"><span class="badge pending">—</span></td><td class="right num">4</td><td class="right num">50</td><td class="right num">—</td><td class="right"><span class="badge pending">M1 pendiente</span></td></tr>
-<tr><td class="name">Farma Util</td><td class="right"><span class="badge pending">—</span></td><td class="right num">0</td><td class="right num">50</td><td class="right num">—</td><td class="right"><span class="badge pending">Sin inicio</span></td></tr>
-</tbody>
-</table>
-</div>
+<div class="sec-head"><h2>Metodología &amp; Estado de Recolección</h2><p>Estructura del estudio · avance por módulo · Segunda Toma 2.0</p></div>
+<div class="banner"><div class="banner-text"><strong>Toma I completada.</strong> Toma II en curso — Módulos A, B y C actualizados.</div></div>
+<div class="data-table-wrap" style="margin-top:20px;"><table class="data-table"><thead><tr><th>Módulo</th><th>Descripción</th><th class="right">Toma I</th><th class="right">Toma II</th></tr></thead><tbody>
+<tr><td class="name">Módulo A</td><td>Entrevistas a responsables de locales</td><td class="right"><span class="badge ok">✓ 7 entrevistas</span></td><td class="right"><span class="badge warn">3 entrevistas</span></td></tr>
+<tr><td class="name">Módulo B</td><td>Encuestas a clientes finales compradores de tirzepatida</td><td class="right"><span class="badge ok">✓ 284 encuestas</span></td><td class="right"><span class="badge warn">172 encuestas</span></td></tr>
+<tr><td class="name">Módulo C</td><td>Relevamiento y extrapolación de ventas por local</td><td class="right"><span class="badge ok">✓ 7 locales</span></td><td class="right"><span class="badge warn">2 locales con datos</span></td></tr>
+</tbody></table></div>
 </section>
 </main>
 <footer>
@@ -1233,8 +1302,8 @@ window.addEventListener('load', () => {
   new Chart(document.getElementById('cMotivo'),{
     type:'doughnut',
     data:{
-      labels:['Pérdida de peso ','Rec. médica general ','Control diabetes T2 ','Prevención metabólica '],
-      datasets:[{data:[72.0,13.1,10.7,0.7],backgroundColor:COLS,borderWidth:0,hoverOffset:8}]
+      labels:['Pérdida de peso ','Rec. médica general ','Control diabetes T2 ','Prevención metabólica ','Otros '],
+      datasets:[{data:[73.2,13.4,10.9,0.7,1.8],backgroundColor:COLS,borderWidth:0,hoverOffset:8}]
     },
     options:{...pieOpts, plugins:{datalabels:doughnutDataLabels,...pieOpts.plugins, tooltip:{...pieOpts.plugins.tooltip, callbacks:{label:ctx=>`${ctx.label}: ${ctx.parsed}%`}}}}
   });
@@ -1244,7 +1313,7 @@ window.addEventListener('load', () => {
     type:'doughnut',
     data:{
       labels:['Brasilera ','Paraguaya ','Argentina '],
-      datasets:[{data:[88.2,10.4,1.4],backgroundColor:[SKY,BLUE,PURPLE],borderWidth:0,hoverOffset:8}]
+      datasets:[{data:[88,10.6,1.4],backgroundColor:[SKY,BLUE,PURPLE],borderWidth:0,hoverOffset:8}]
     },
     options:{...pieOpts, plugins:{datalabels:doughnutDataLabels,...pieOpts.plugins, tooltip:{...pieOpts.plugins.tooltip, callbacks:{label:ctx=>`${ctx.label}: ${ctx.parsed}%`}}}}
   });
@@ -1254,7 +1323,7 @@ window.addEventListener('load', () => {
     type:'doughnut',
     data:{
       labels:['Femenino ','Masculino '],
-      datasets:[{data:[59.5,40.5],backgroundColor:[PURPLE,SKY],borderWidth:0,hoverOffset:8}]
+      datasets:[{data:[60.2,39.8],backgroundColor:[PURPLE,SKY],borderWidth:0,hoverOffset:8}]
     },
     options:{...pieOpts, plugins:{datalabels:doughnutDataLabels,...pieOpts.plugins, tooltip:{...pieOpts.plugins.tooltip, callbacks:{label:ctx=>`${ctx.label}: ${ctx.parsed}%`}}}}
   });
@@ -1264,7 +1333,7 @@ window.addEventListener('load', () => {
     type:'bar',
     data:{
       labels:['Cada 2-3 meses','Ocasionalmente','Cada mes','Primera compra','Cada semana'],
-      datasets:[{label:'% Clientes',data:[30.4,29.1,25.6,12.5,0.7],
+      datasets:[{label:'% Clientes',data:[31.0,29.6,26.1,12.7,0.7],
         backgroundColor:SKY+'BB',borderColor:SKY,borderWidth:1,borderRadius:4}]
     },
     options:{...baseOpts(false),indexAxis:'y',plugins:{...baseOpts(false).plugins,datalabels:horizontalDataLabels},scales:{
@@ -1277,8 +1346,8 @@ window.addEventListener('load', () => {
   new Chart(document.getElementById('cFactor'),{
     type:'bar',
     data:{
-      labels:['Result. pérdida peso','Rec. del médico','Control de glucosa','Precio','No sabe'],
-      datasets:[{label:'% Clientes',data:[56.7,33.2,5.5,1.0,1.0],
+      labels:['Result. pérdida peso','Rec. del médico','Control de glucosa','Opiniones otros','Precio'],
+      datasets:[{label:'% Clientes',data:[55.3,37.0,4.6,1.8,1.4],
         backgroundColor:BLUE+'CC',borderColor:BLUE,borderWidth:1,borderRadius:4}]
     },
     options:{...baseOpts(false),indexAxis:'y',plugins:{...baseOpts(false).plugins,datalabels:horizontalDataLabels},scales:{
@@ -1292,7 +1361,7 @@ window.addEventListener('load', () => {
     type:'doughnut',
     data:{
       labels:['Adecuado ','Barato ','Caro ','Muy barato ','Muy caro '],
-      datasets:[{data:[49.1,25.6,14.9,5.5,3.1],
+      datasets:[{data:[50,26,15.1,5.6,3.2],
         backgroundColor:[SKY,SKY2+'99',PURPLE,'#0099CC55',PURPLE+'55'],
         borderWidth:0,hoverOffset:8}]
     },
@@ -1301,12 +1370,12 @@ window.addEventListener('load', () => {
 
   // Recomendación C1
   const c1Data = {
-    'Méd. especialista':42.9,
-    'Amigo/familiar':24.2,
-    'Médico clínico':19.4,
-    'Decisión propia':9.0,
-    'No sabe':1.4,
-    'Redes sociales':0.7
+    'Amigo/familiar':46.1,
+    'Méd. especialista':40.8,
+    'Médico clínico':6.7,
+    'Decisión propia':4.9,
+    'Redes sociales':0.7,
+    'Otros':0.7
   };
   new Chart(document.getElementById('cC1'),{
     type:'bar',
@@ -1326,7 +1395,7 @@ window.addEventListener('load', () => {
     type:'doughnut',
     data:{
       labels:['Uso propio ','Para un familiar ','Para otra persona '],
-      datasets:[{data:[78.5,15.9,3.8],backgroundColor:[NAVY,SKY,PURPLE],borderWidth:0,hoverOffset:8}]
+      datasets:[{data:[73.2,16.5,10.2],backgroundColor:[NAVY,SKY,PURPLE],borderWidth:0,hoverOffset:8}]
     },
     options:{...pieOpts, plugins:{datalabels:doughnutDataLabels,...pieOpts.plugins, tooltip:{...pieOpts.plugins.tooltip, callbacks:{label:ctx=>`${ctx.label}: ${ctx.parsed}%`}}}}
   });
@@ -1335,8 +1404,8 @@ window.addEventListener('load', () => {
   new Chart(document.getElementById('cMarcaShare'),{
     type:'doughnut',
     data:{
-      labels:['T.G. ','Lipoless ','Tirzec ','Tirzedral ','Gluconex ','TirzseBound ','Lipoland '],
-      datasets:[{data:[35.3,31.5,20.1,8.7,2.1,0.3,0.3],backgroundColor:COLS,borderWidth:0,hoverOffset:8}]
+      labels:['T.G. ','Lipoless ','Tirzec ','Tirzedral ','Gluconex ','Otros '],
+      datasets:[{data:[35.9,32.0,20.4,8.8,2.1,0.7],backgroundColor:COLS,borderWidth:0,hoverOffset:8}]
     },
     options:{...pieOpts, plugins:{datalabels:doughnutDataLabels,...pieOpts.plugins, tooltip:{...pieOpts.plugins.tooltip, callbacks:{label:ctx=>`${ctx.label}: ${ctx.parsed}%`}}}}
   });
@@ -1355,13 +1424,13 @@ window.addEventListener('load', () => {
 
   // Ranking marcas
   const marcas = [
-    {n:'T.G.',v:35.3,pct:35.3,cajas:99000},
-    {n:'Lipoless',v:31.5,pct:31.5,cajas:66000},
-    {n:'Tirzec',v:20.1,pct:20.1,cajas:32000},
-    {n:'Tirzedral',v:8.7,pct:8.7,cajas:28000},
+    {n:'T.G.',v:35.9,pct:35.9,cajas:99000},
+    {n:'Lipoless',v:32.0,pct:32.0,cajas:66000},
+    {n:'Tirzec',v:20.4,pct:20.4,cajas:32000},
+    {n:'Tirzedral',v:8.8,pct:8.8,cajas:28000},
     {n:'Gluconex',v:2.1,pct:2.1,cajas:9000},
-    {n:'TirzseBound',v:0.3,pct:0.3,cajas:330},
-    {n:'Lipoland',v:0.3,pct:0.3,cajas:53}
+    {n:'TirzseBound',v:0.4,pct:0.4,cajas:330},
+    {n:'Lipoland',v:0.4,pct:0.4,cajas:53}
   ];
   const rl = document.getElementById('rankMarcas');
   marcas.forEach((m,i)=>{
@@ -1379,12 +1448,12 @@ window.addEventListener('load', () => {
 
   // Precio por local (bars inline)
   const precLocal = [
-    {n:'Cellshop',v:88.2},
-    {n:'Shopping China',v:86.1},
+    {n:'Cellshop',v:87.9},
+    {n:'Shopping China',v:85.7},
     {n:'Farm. Pink',v:85.0},
-    {n:'Farm. Triunfo',v:81.5},
-    {n:'Farm. Columbia',v:78.2},
-    {n:'Farm. Do Sul',v:77.3},
+    {n:'Farm. Triunfo',v:82.2},
+    {n:'Farm. Columbia',v:79.9},
+    {n:'Farm. Do Sul',v:78.0},
     {n:'Farm. Brasil',v:75.2}
   ];
   const maxL = 90;
@@ -1426,7 +1495,7 @@ window.addEventListener('load', () => {
     type:'bar',
     data:{
       labels:['Adecuado','Barato','Caro','Muy barato','Muy caro'],
-      datasets:[{label:'% Clientes',data:[49.1,25.6,14.9,5.5,3.1],
+      datasets:[{label:'% Clientes',data:[50,26,15.1,5.6,3.2],
         backgroundColor:[SKY,SKY2,PURPLE,SKY+'55',PURPLE+'55'],
         borderColor:[SKY,SKY2,PURPLE,SKY,PURPLE],
         borderWidth:1,borderRadius:5}]
@@ -1437,11 +1506,12 @@ window.addEventListener('load', () => {
     },plugins:{...baseOpts(false).plugins,tooltip:{...baseOpts(false).plugins.tooltip,callbacks:{label:ctx=>`${ctx.parsed.y}%`}}}}
   });
 
+  // Encuestas por local
   new Chart(document.getElementById('cLocalEnc'),{
     type:'bar',
     data:{
-      labels:['F. Triunfo','Cellshop','F. Columbia','F. Pink','F. Do Sul','F. Brasil','Shop. China'],
-      datasets:[{label:'Encuestas',data:[44,43,41,41,40,40,40],
+      labels:['F. Triunfo','F. Pink','Cellshop','Shop. China','F. Columbia','F. Brasil','F. Do Sul'],
+      datasets:[{label:'Encuestas',data:[42,41,41,40,40,40,40],
         backgroundColor:COLS.map(c=>c+'AA'),borderColor:COLS,borderWidth:1,borderRadius:4}]
     },
     options:baseOpts(false)
@@ -1459,20 +1529,30 @@ window.addEventListener('load', () => {
   });
 
   // Tabla locales
+  // Mapping: Cell Shopp y Farmacia Triunfo aparecen en T1 y T2 (badge-both), resto solo T1
+  const tomaTag = {
+    'Farmacia Pink':    '<span class="badge-t01">T.01</span>',
+    'Cellshop':         '<span class="badge-both">T.01 · T.02</span>',
+    'Farmacia Brasil':  '<span class="badge-t01">T.01</span>',
+    'Farmacia Do Sul':  '<span class="badge-t01">T.01</span>',
+    'Farmacia Columbia':'<span class="badge-t01">T.01</span>',
+    'Shopping China':   '<span class="badge-t01">T.01</span>',
+    'Farmacia Triunfo': '<span class="badge-both">T.01 · T.02</span>'
+  };
   const localesData = [
-    {n:'Cellshop',enc:43,cajas:144000,precio:88.2,br:95.3,tend:'↑'},
-    {n:'Farm. Triunfo',enc:44,cajas:36000,precio:81.5,br:88.6,tend:'—'},
-    {n:'Shopping China',enc:40,cajas:14400,precio:86.1,br:90.0,tend:'↑'},
-    {n:'Farm. Columbia',enc:41,cajas:13200,precio:78.2,br:90.2,tend:'↑'},
-    {n:'Farm. Do Sul',enc:40,cajas:12960,precio:77.3,br:92.5,tend:'↑'},
-    {n:'Farm. Brasil',enc:40,cajas:10200,precio:75.2,br:80.0,tend:'↑'},
-    {n:'Farm. Pink',enc:41,cajas:2160,precio:85.0,br:80.5,tend:'↑'}
+    {n:'Farmacia Pink',enc:41,cajas:2160,precio:85.0,br:80,tend:'↑'},
+    {n:'Cellshop',enc:41,cajas:144000,precio:87.9,br:92,tend:'↑'},
+    {n:'Farmacia Brasil',enc:40,cajas:10200,precio:75.2,br:88,tend:'↑'},
+    {n:'Farmacia Do Sul',enc:40,cajas:12960,precio:78.0,br:90,tend:'↑'},
+    {n:'Farmacia Columbia',enc:40,cajas:13200,precio:79.9,br:85,tend:'↑'},
+    {n:'Shopping China',enc:40,cajas:14400,precio:85.7,br:88,tend:'↑'},
+    {n:'Farmacia Triunfo',enc:42,cajas:36000,precio:82.2,br:83,tend:'—'}
   ];
   const tb = document.getElementById('tablaLocales');
   localesData.forEach(l=>{
     tb.innerHTML += `
       <tr>
-        <td class="name">${l.n}</td>
+        <td class="name">${l.n} ${tomaTag[l.n]||''}</td>
         <td class="right num">${l.enc}</td>
         <td class="right num">${l.cajas.toLocaleString()}</td>
         <td class="right num">${l.precio}</td>
@@ -1485,28 +1565,37 @@ window.addEventListener('load', () => {
 
   // ── INITIALIZE CHARTS (Toma II) ───────────────────────────────
   const fmtPct = v => Number(v).toFixed(1).replace('.0','') + '%';
-  new Chart(document.getElementById('cMotivoT2'),{type:'doughnut',data:{labels:["Pérdida de peso","Recomendación médica general","Control de diabetes tipo 2"],datasets:[{data:[68.2,30.3,1.5],backgroundColor:COLS,borderWidth:0,hoverOffset:8}]},options:{...pieOpts,plugins:{datalabels:doughnutDataLabels,...pieOpts.plugins,tooltip:{...pieOpts.plugins.tooltip,callbacks:{label:ctx=>`${ctx.label}: ${ctx.parsed}%`}}}}});
-  new Chart(document.getElementById('cNacT2'),{type:'doughnut',data:{labels:["Brasilera","Argentina","Paraguaya"],datasets:[{data:[89.4,7.6,3],backgroundColor:[SKY,BLUE,PURPLE],borderWidth:0,hoverOffset:8}]},options:{...pieOpts,plugins:{datalabels:doughnutDataLabels,...pieOpts.plugins,tooltip:{...pieOpts.plugins.tooltip,callbacks:{label:ctx=>`${ctx.label}: ${ctx.parsed}%`}}}}});
-  new Chart(document.getElementById('cSexoT2'),{type:'doughnut',data:{labels:["Femenino","Masculino"],datasets:[{data:[56.1,43.9],backgroundColor:[PURPLE,SKY],borderWidth:0,hoverOffset:8}]},options:{...pieOpts,plugins:{datalabels:doughnutDataLabels,...pieOpts.plugins,tooltip:{...pieOpts.plugins.tooltip,callbacks:{label:ctx=>`${ctx.label}: ${ctx.parsed}%`}}}}});
-  new Chart(document.getElementById('cFrecT2'),{type:'bar',data:{labels:["Ocasionalmente","Cada mes","Cada 2 - 3 meses","Primera compra","Cada semana"],datasets:[{label:'% Clientes',data:[63.6,18.2,15.2,1.5,1.5],backgroundColor:SKY+'BB',borderColor:SKY,borderWidth:1,borderRadius:4}]},options:{...baseOpts(false),indexAxis:'y',plugins:{...baseOpts(false).plugins,datalabels:horizontalDataLabels,tooltip:{...baseOpts(false).plugins.tooltip,callbacks:{label:ctx=>`${ctx.parsed.x}%`}}},scales:{x:{grid:{color:'rgba(0,0,0,0.04)'},ticks:{color:'#000000',callback:v=>v+'%'}},y:{grid:{display:false},ticks:{color:'#000000',font:{size:11,weight:'600'}}}}}});
-  new Chart(document.getElementById('cFactorT2'),{type:'bar',data:{labels:["Resultados para bajar de peso","Recomendación del médico","Opiniones de otras personas"],datasets:[{label:'% Clientes',data:[66.7,31.8,1.5],backgroundColor:BLUE+'CC',borderColor:BLUE,borderWidth:1,borderRadius:4}]},options:{...baseOpts(false),indexAxis:'y',plugins:{...baseOpts(false).plugins,datalabels:horizontalDataLabels,tooltip:{...baseOpts(false).plugins.tooltip,callbacks:{label:ctx=>`${ctx.parsed.x}%`}}},scales:{x:{grid:{color:'rgba(0,0,0,0.04)'},ticks:{color:'#000000',callback:v=>v+'%'}},y:{grid:{display:false},ticks:{color:'#000000',font:{size:11,weight:'600'}}}}}});
-  new Chart(document.getElementById('cPrecioT2'),{type:'doughnut',data:{labels:["Adecuado","Caro","Barato","Muy barato"],datasets:[{data:[66.7,21.2,10.6,1.5],backgroundColor:[SKY,PURPLE,SKY2,'#0099CC55'],borderWidth:0,hoverOffset:8}]},options:{...pieOpts,plugins:{datalabels:doughnutDataLabels,...pieOpts.plugins,tooltip:{...pieOpts.plugins.tooltip,callbacks:{label:ctx=>`${ctx.label}: ${ctx.parsed}%`}}}}});
-  new Chart(document.getElementById('cC1T2'),{type:'bar',data:{labels:["Médico especialista (endocrinólogo / diabetólogo)","Amigo/familiar","Decisión propia","Médico clínico","Redes sociales / internet","Farmacéutico"],datasets:[{label:'% Clientes',data:[33.3,25.8,22.7,13.6,3,1.5],backgroundColor:NAVY+'BB',borderColor:NAVY,borderWidth:1,borderRadius:4}]},options:{...baseOpts(false),indexAxis:'y',plugins:{...baseOpts(false).plugins,datalabels:horizontalDataLabels,tooltip:{...baseOpts(false).plugins.tooltip,callbacks:{label:ctx=>`${ctx.parsed.x}%`}}},scales:{x:{grid:{color:'rgba(0,0,0,0.04)'},ticks:{color:'#000000',callback:v=>v+'%'}},y:{grid:{display:false},ticks:{color:'#000000',font:{size:11}}}}}});
-  new Chart(document.getElementById('cA2T2'),{type:'doughnut',data:{labels:["Uso propio","Para un familiar","Uso propio, Para un familiar","Para otra persona (no familiar)"],datasets:[{data:[68.2,16.7,9.1,6.1],backgroundColor:[NAVY,SKY,PURPLE,SKY2],borderWidth:0,hoverOffset:8}]},options:{...pieOpts,plugins:{datalabels:doughnutDataLabels,...pieOpts.plugins,tooltip:{...pieOpts.plugins.tooltip,callbacks:{label:ctx=>`${ctx.label}: ${ctx.parsed}%`}}}}});
-  new Chart(document.getElementById('cMarcaShareT2'),{type:'doughnut',data:{labels:["Lipoless","T.G.","Tirzec","Tirzedral","Gluconex"],datasets:[{data:[36.4,33.3,19.7,6.1,4.5],backgroundColor:COLS,borderWidth:0,hoverOffset:8}]},options:{...pieOpts,plugins:{datalabels:doughnutDataLabels,...pieOpts.plugins,tooltip:{...pieOpts.plugins.tooltip,callbacks:{label:ctx=>`${ctx.label}: ${ctx.parsed}%`}}}}});
+  new Chart(document.getElementById('cMotivoT2'),{type:'doughnut',data:{labels:["Pérdida de peso","Recomendación médica general","Control de diabetes tipo 2","Otros"],datasets:[{data:[72.7,18.2,5.5,3.6],backgroundColor:COLS,borderWidth:0,hoverOffset:8}]},options:{...pieOpts,plugins:{datalabels:doughnutDataLabels,...pieOpts.plugins,tooltip:{...pieOpts.plugins.tooltip,callbacks:{label:ctx=>`${ctx.label}: ${ctx.parsed}%`}}}}});
+  new Chart(document.getElementById('cNacT2'),{type:'doughnut',data:{labels:["Brasilera","Argentina","Paraguaya"],datasets:[{data:[92.4,4.7,2.9],backgroundColor:[SKY,BLUE,PURPLE],borderWidth:0,hoverOffset:8}]},options:{...pieOpts,plugins:{datalabels:doughnutDataLabels,...pieOpts.plugins,tooltip:{...pieOpts.plugins.tooltip,callbacks:{label:ctx=>`${ctx.label}: ${ctx.parsed}%`}}}}});
+  new Chart(document.getElementById('cSexoT2'),{type:'doughnut',data:{labels:["Femenino","Masculino"],datasets:[{data:[57.6,42.4],backgroundColor:[PURPLE,SKY],borderWidth:0,hoverOffset:8}]},options:{...pieOpts,plugins:{datalabels:doughnutDataLabels,...pieOpts.plugins,tooltip:{...pieOpts.plugins.tooltip,callbacks:{label:ctx=>`${ctx.label}: ${ctx.parsed}%`}}}}});
+  new Chart(document.getElementById('cFrecT2'),{type:'bar',data:{labels:["Ocasionalmente","Cada mes","Cada 2 - 3 meses","Primera compra","Cada semana","Cada día"],datasets:[{label:'% Clientes',data:[53.9,20.6,16.4,6.1,1.8,1.2],backgroundColor:SKY+'BB',borderColor:SKY,borderWidth:1,borderRadius:4}]},options:{...baseOpts(false),indexAxis:'y',plugins:{...baseOpts(false).plugins,datalabels:horizontalDataLabels,tooltip:{...baseOpts(false).plugins.tooltip,callbacks:{label:ctx=>`${ctx.parsed.x}%`}}},scales:{x:{grid:{color:'rgba(0,0,0,0.04)'},ticks:{color:'#000000',callback:v=>v+'%'}},y:{grid:{display:false},ticks:{color:'#000000',font:{size:11,weight:'600'}}}}}});
+  new Chart(document.getElementById('cFactorT2'),{type:'bar',data:{labels:["Resultados para bajar de peso","Recomendación del médico","Opiniones de otras personas","Control de glucosa","Precio del medicamento"],datasets:[{label:'% Clientes',data:[66.7,27.3,2.4,1.8,1.8],backgroundColor:BLUE+'CC',borderColor:BLUE,borderWidth:1,borderRadius:4}]},options:{...baseOpts(false),indexAxis:'y',plugins:{...baseOpts(false).plugins,datalabels:horizontalDataLabels,tooltip:{...baseOpts(false).plugins.tooltip,callbacks:{label:ctx=>`${ctx.parsed.x}%`}}},scales:{x:{grid:{color:'rgba(0,0,0,0.04)'},ticks:{color:'#000000',callback:v=>v+'%'}},y:{grid:{display:false},ticks:{color:'#000000',font:{size:11,weight:'600'}}}}}});
+  new Chart(document.getElementById('cPrecioT2'),{type:'doughnut',data:{labels:["Adecuado","Barato","Caro","Muy barato"],datasets:[{data:[63.6,20.0,13.3,3.0],backgroundColor:[SKY,SKY2,PURPLE,'#0099CC55'],borderWidth:0,hoverOffset:8}]},options:{...pieOpts,plugins:{datalabels:doughnutDataLabels,...pieOpts.plugins,tooltip:{...pieOpts.plugins.tooltip,callbacks:{label:ctx=>`${ctx.label}: ${ctx.parsed}%`}}}}});
+  new Chart(document.getElementById('cC1T2'),{type:'bar',data:{labels:["Médico especialista (endocrinólogo / diabetólogo)","Decisión propia","Amigo/familiar","Médico clínico","Farmacéutico","Redes sociales / internet"],datasets:[{label:'% Clientes',data:[33.3,24.8,22.4,12.7,1.8,1.2],backgroundColor:NAVY+'BB',borderColor:NAVY,borderWidth:1,borderRadius:4}]},options:{...baseOpts(false),indexAxis:'y',plugins:{...baseOpts(false).plugins,datalabels:horizontalDataLabels,tooltip:{...baseOpts(false).plugins.tooltip,callbacks:{label:ctx=>`${ctx.parsed.x}%`}}},scales:{x:{grid:{color:'rgba(0,0,0,0.04)'},ticks:{color:'#000000',callback:v=>v+'%'}},y:{grid:{display:false},ticks:{color:'#000000',font:{size:11}}}}}});
+  new Chart(document.getElementById('cA2T2'),{type:'doughnut',data:{labels:["Uso propio","Para un familiar","Uso propio, Para un familiar","Para otra persona (no familiar)"],datasets:[{data:[66.1,15.2,11.5,6.7],backgroundColor:[NAVY,SKY,PURPLE,SKY2],borderWidth:0,hoverOffset:8}]},options:{...pieOpts,plugins:{datalabels:doughnutDataLabels,...pieOpts.plugins,tooltip:{...pieOpts.plugins.tooltip,callbacks:{label:ctx=>`${ctx.label}: ${ctx.parsed}%`}}}}});
+  new Chart(document.getElementById('cMarcaShareT2'),{type:'doughnut',data:{labels:["T.G.","Lipoless","Tirzec","Tirzedral","Gluconex","Otros"],datasets:[{data:[42.4,25.5,23.6,4.8,1.8,1.8],backgroundColor:COLS,borderWidth:0,hoverOffset:8}]},options:{...pieOpts,plugins:{datalabels:doughnutDataLabels,...pieOpts.plugins,tooltip:{...pieOpts.plugins.tooltip,callbacks:{label:ctx=>`${ctx.label}: ${ctx.parsed}%`}}}}});
   new Chart(document.getElementById('cCajasT2'),{type:'bar',data:{labels:["Gluconex","Lipoless","T.G.","Tirzec","Tirzedral"],datasets:[{label:'Cajas/mes',data:[0,516,663,0,0],backgroundColor:COLS.map(c=>c+'AA'),borderColor:COLS,borderWidth:1,borderRadius:4}]},options:baseOpts(false)});
-  const marcasT2=[{"n": "Lipoless", "pct": 36.4, "c": 24}, {"n": "T.G.", "pct": 33.3, "c": 22}, {"n": "Tirzec", "pct": 19.7, "c": 13}, {"n": "Tirzedral", "pct": 6.1, "c": 4}, {"n": "Gluconex", "pct": 4.5, "c": 3}];
+  const marcasT2=[{"n": "T.G.", "pct": 42.4, "c": 70}, {"n": "Lipoless", "pct": 25.5, "c": 42}, {"n": "Tirzec", "pct": 23.6, "c": 39}, {"n": "Tirzedral", "pct": 4.8, "c": 8}, {"n": "Gluconex", "pct": 1.8, "c": 3}, {"n": "Otros", "pct": 1.8, "c": 3}];
   const rlT2=document.getElementById('rankMarcasT2');
   marcasT2.forEach((m,i)=>{rlT2.innerHTML+=`<div class="rank-item"><span class="rank-num">${i+1}</span><span class="rank-name">${m.n}</span><div class="rank-bar-wrap"><div class="rank-bar" style="width:${(m.pct/36.4)*100}%;background:${COLS[i%COLS.length]};"></div></div><span class="rank-pct">${m.pct}%</span><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#555;width:80px;text-align:right;">${m.c} compras</span></div>`;});
-  const precLocalT2=[{"n": "Farmacia Columbia T2", "v": 76.0}, {"n": "Cell Shopp T2", "v": 79.0}, {"n": "Farmacia Triunfo T2*", "v": 88.0}, {"n": "FarmaCon", "v": 81.0}, {"n": "iClinic", "v": 81.0}, {"n": "Farmashop Dior", "v": 120.0}];
+  const precLocalT2=[{"n": "Farma Shop Dior", "v": 83.5}, {"n": "Triunfo", "v": 85.9}, {"n": "FarmaCon", "v": 82.4}, {"n": "ICLINIC", "v": 81.3}, {"n": "Cell Shopp", "v": 80.5}, {"n": "Farma Util", "v": 84.3}, {"n": "Columbia", "v": 74.2}];
   const plWrapT2=document.getElementById('precioLocalBarsT2'); precLocalT2.forEach((p,i)=>{plWrapT2.innerHTML+=`<div class="price-bar"><div class="price-lbl">${p.n}</div><div class="price-track"><div class="price-fill" style="width:${(p.v/125)*100}%;background:${COLS[i%COLS.length]};"></div></div><div class="price-val">USD ${p.v}</div></div>`;});
-  const precMarcaT2=[{"n": "Gluconex", "v": 85.0}, {"n": "T.G.", "v": 85.0}, {"n": "Tirzedral", "v": 85.0}, {"n": "Tirzec", "v": 80.0}, {"n": "Lipoless", "v": 77.0}];
+  const precMarcaT2=[{"n": "Tirzedral", "v": 85.6}, {"n": "Gluconex", "v": 85.0}, {"n": "T.G.", "v": 83.8}, {"n": "Tirzec", "v": 79.3}, {"n": "Lipoless", "v": 76.0}];
   const pmWrapT2=document.getElementById('precioMarcaBarsT2'); precMarcaT2.forEach((p,i)=>{pmWrapT2.innerHTML+=`<div class="price-bar"><div class="price-lbl">${p.n}</div><div class="price-track"><div class="price-fill" style="width:${(p.v/90)*100}%;background:${COLS[i%COLS.length]};"></div></div><div class="price-val">USD ${p.v}</div></div>`;});
-  new Chart(document.getElementById('cPrecioDetalleT2'),{type:'bar',data:{labels:["Adecuado","Caro","Barato","Muy barato"],datasets:[{label:'% Clientes',data:[66.7,21.2,10.6,1.5],backgroundColor:COLS.map(c=>c+'AA'),borderColor:COLS,borderWidth:1,borderRadius:5}]},options:{...baseOpts(false),plugins:{...baseOpts(false).plugins,datalabels:barDataLabels,tooltip:{...baseOpts(false).plugins.tooltip,callbacks:{label:ctx=>`${ctx.parsed.y}%`}}},scales:{x:{grid:{color:'rgba(0,0,0,0.04)'},ticks:{color:'#000000'}},y:{grid:{color:'rgba(0,0,0,0.04)'},ticks:{color:'#000000',callback:v=>v+'%'}}}}});
-  new Chart(document.getElementById('cLocalEncT2'),{type:'bar',data:{labels:["FarmaCon","Columbia T2","ICLINIC","Farmashop Dior","Cell Shopp T2","Triunfo T2*","Farma Util"],datasets:[{label:'Encuestas',data:[15,14,14,11,8,4,0],backgroundColor:COLS.map(c=>c+'AA'),borderColor:COLS,borderWidth:1,borderRadius:4}]},options:baseOpts(false)});
-  new Chart(document.getElementById('cLocalCajasT2'),{type:'bar',data:{labels:["Cell Shopp T2","Farmashop Dior","Columbia T2","FarmaCon","ICLINIC","Triunfo T2*","Farma Util"],datasets:[{label:'Cajas/mes',data:[28800,2280,0,0,0,0,0],backgroundColor:COLS.map(c=>c+'BB'),borderColor:COLS,borderWidth:1,borderRadius:4}]},options:baseOpts(false)});
-  const localesT2=[{"n": "Cell Shopp T2", "enc": 8, "cajas": 28800, "precio": 79.0, "br": 87.5, "estado": "Activo"}, {"n": "Farmacia Columbia T2", "enc": 14, "cajas": 0, "precio": 76.0, "br": 85.7, "estado": "Activo"}, {"n": "Farmashop Dior", "enc": 11, "cajas": 2280, "precio": 120.0, "br": 100.0, "estado": "Activo"}, {"n": "FarmaCon", "enc": 15, "cajas": 0, "precio": 81.0, "br": 86.7, "estado": "Activo"}, {"n": "iClinic", "enc": 14, "cajas": 0, "precio": 81.0, "br": 85.7, "estado": "Activo"}, {"n": "Farmacia Triunfo T2*", "enc": 4, "cajas": 0, "precio": 88.0, "br": 100.0, "estado": "Activo"}, {"n": "Farma Util", "enc": 0, "cajas": 0, "precio": null, "br": null, "estado": "Pendiente"}];
-  const tbT2=document.getElementById('tablaLocalesT2'); localesT2.forEach(l=>{tbT2.innerHTML+=`<tr><td class="name">${l.n}</td><td class="right num">${l.enc}</td><td class="right num">${Number(l.cajas).toLocaleString('es-PY')}</td><td class="right num">${l.precio ?? '—'}</td><td class="right num">${l.br == null ? '—' : l.br + '%'}</td><td class="right"><span class="badge ${l.estado==='Activo'?'warn':'pending'}">${l.estado}</span></td></tr>`;});
+  new Chart(document.getElementById('cPrecioDetalleT2'),{type:'bar',data:{labels:["Adecuado","Barato","Caro","Muy barato"],datasets:[{label:'% Clientes',data:[63.6,20.0,13.3,3.0],backgroundColor:COLS.map(c=>c+'AA'),borderColor:COLS,borderWidth:1,borderRadius:5}]},options:{...baseOpts(false),plugins:{...baseOpts(false).plugins,datalabels:barDataLabels,tooltip:{...baseOpts(false).plugins.tooltip,callbacks:{label:ctx=>`${ctx.parsed.y}%`}}},scales:{x:{grid:{color:'rgba(0,0,0,0.04)'},ticks:{color:'#000000'}},y:{grid:{color:'rgba(0,0,0,0.04)'},ticks:{color:'#000000',callback:v=>v+'%'}}}}});
+  new Chart(document.getElementById('cLocalEncT2'),{type:'bar',data:{labels:["Cell Shopp","FarmaCon","Columbia","Farma Shop Dior","ICLINIC","Farma Util","Triunfo"],datasets:[{label:'Encuestas',data:[36,30,29,25,21,16,15],backgroundColor:COLS.map(c=>c+'AA'),borderColor:COLS,borderWidth:1,borderRadius:4}]},options:baseOpts(false)});
+  new Chart(document.getElementById('cLocalCajasT2'),{type:'bar',data:{labels:["Cell Shopp","FarmaCon","Columbia","Farma Shop Dior","ICLINIC","Farma Util","Triunfo"],datasets:[{label:'Cajas/mes',data:[28800,0,0,2280,0,0,0],backgroundColor:COLS.map(c=>c+'BB'),borderColor:COLS,borderWidth:1,borderRadius:4}]},options:baseOpts(false)});
+  const tomaTagT2 = {
+    'Cell Shopp':      '<span class="badge-both">T.01 · T.02</span>',
+    'FarmaCon':        '<span class="badge-t02">T.02</span>',
+    'Columbia':        '<span class="badge-t02">T.02</span>',
+    'Farma Shop Dior': '<span class="badge-t02">T.02</span>',
+    'ICLINIC':         '<span class="badge-t02">T.02</span>',
+    'Farma Util':      '<span class="badge-t02">T.02</span>',
+    'Triunfo':         '<span class="badge-both">T.01 · T.02</span>'
+  };
+  const localesT2=[{"n": "Cell Shopp", "enc": 36, "cajas": 28800, "precio": 80.5, "br": 86.1, "estado": "Activo"}, {"n": "FarmaCon", "enc": 30, "cajas": 0, "precio": 82.4, "br": 93.3, "estado": "Activo"}, {"n": "Columbia", "enc": 29, "cajas": 0, "precio": 74.2, "br": 86.2, "estado": "Activo"}, {"n": "Farma Shop Dior", "enc": 25, "cajas": 2280, "precio": 83.5, "br": 100.0, "estado": "Activo"}, {"n": "ICLINIC", "enc": 21, "cajas": 0, "precio": 81.3, "br": 90.5, "estado": "Activo"}, {"n": "Farma Util", "enc": 16, "cajas": 0, "precio": 84.3, "br": 100.0, "estado": "Activo"}, {"n": "Triunfo", "enc": 15, "cajas": 0, "precio": 85.9, "br": 100.0, "estado": "Activo"}];
+  const tbT2=document.getElementById('tablaLocalesT2'); localesT2.forEach(l=>{tbT2.innerHTML+=`<tr><td class="name">${l.n} ${tomaTagT2[l.n]||''}</td><td class="right num">${l.enc}</td><td class="right num">${Number(l.cajas).toLocaleString('es-PY')}</td><td class="right num">${l.precio ?? '—'}</td><td class="right num">${l.br == null ? '—' : l.br + '%'}</td><td class="right"><span class="badge ${l.estado==='Activo'?'warn':'pending'}">${l.estado}</span></td></tr>`;});
 
 
 });
