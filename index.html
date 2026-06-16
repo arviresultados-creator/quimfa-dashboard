@@ -277,7 +277,20 @@ function updateHeaderTitle(t){const h1=document.querySelector('.header-h1');if(!
 function switchToma(t){currentToma=t;updateHeaderTitle(t);document.querySelectorAll('.t-btn').forEach(b=>b.classList.remove('active'));if(t==='toma1')document.querySelector('.toma1-btn').classList.add('active');else document.querySelector('.toma2-btn').classList.add('active');document.querySelectorAll('.toma-view').forEach(v=>v.classList.remove('active'));document.getElementById('view-'+t).classList.add('active');const tabMet=document.getElementById('tab-metodologia');if(tabMet)tabMet.style.display=t==='toma1'?'none':'';const ft=document.querySelector('nav .tab:first-child');showTab('panorama',ft);}
 function showTab(id,el){document.querySelectorAll('nav .tab').forEach(t=>t.classList.remove('active'));el.classList.add('active');if(id==='metodologia'){document.querySelectorAll('.toma-view').forEach(v=>v.classList.remove('active'));document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));document.getElementById('sec-metodologia').classList.add('active');return;}document.getElementById('view-'+currentToma).classList.add('active');document.getElementById('sec-metodologia').classList.remove('active');document.querySelectorAll('.toma-view .section').forEach(s=>s.classList.remove('active'));document.getElementById(`sec-${id}-${currentToma==='toma1'?'t1':'t2'}`)?.classList.add('active');}
 Chart.register(ChartDataLabels);
-const percentFormatter=(v,ctx)=>{const d=ctx.chart.data.datasets[0].data||[],t=d.reduce((a,b)=>a+(typeof b==='number'?b:0),0);if(ctx.chart.config.type==='doughnut'||ctx.chart.config.type==='pie')return v+'%';if(typeof v==='number'){if(v<=100)return v+'%';return v.toLocaleString();}return v;};
+const percentFormatter = (v, ctx) => {
+  const d = ctx.chart.data.datasets[0].data || [],
+        t = d.reduce((a, b) => a + (typeof b === 'number' ? b : 0), 0);
+  if (ctx.chart.config.type === 'doughnut' || ctx.chart.config.type === 'pie') {
+    return v + '%';  // Para gráficos circulares: muestra el %
+  }
+  if (typeof v === 'number') {
+    if (v <= 100) {
+      return v;  // <--- ELIMINADO EL % - solo el número
+    }
+    return v.toLocaleString();
+  }
+  return v;
+};;
 Chart.defaults.plugins.datalabels={color:'#111',font:{family:"'IBM Plex Sans'",size:10,weight:'700'},formatter:percentFormatter,display:true,textStrokeColor:'rgba(255,255,255,0.85)',textStrokeWidth:3,padding:4};
 const doughnutDataLabels={anchor:'center',align:'center',offset:0,color:'#fff',textStrokeColor:'rgba(0,0,0,0.35)',textStrokeWidth:2};
 const barDataLabels={anchor:'end',align:'top',offset:2};
