@@ -108,7 +108,7 @@ if(prompt("Usuario:")!==USER||prompt("Contraseña:")!==PASS){document.body.inner
 </script>
 <div class="topbar">
 <div class="topbar-left"><div class="topbar-logo"><img alt="Quimfa" src="https://i0.wp.com/logoroga.com/wp-content/uploads/2015/05/quimfa-1.jpg?resize=768%2C768&ssl=1"/></div><div class="topbar-divider"></div><div class="topbar-title">Dashboard · Estudio de Mercado</div></div>
-<div class="topbar-right"><span class="t-btn toma2-btn active" onclick="switchToma('toma2')">Toma II — En Recolección</span><span class="t-btn toma1-btn" onclick="switchToma('toma1')">Toma I — Datos Anteriores</span></div>
+<div class="topbar-right"><span class="t-btn toma2-btn active" onclick="switchToma('toma2')">Toma II — Finalizado</span><span class="t-btn toma1-btn" onclick="switchToma('toma1')">Toma I — Datos Anteriores</span></div>
 </div>
 <div class="header"><div class="header-main"><div class="header-title-block"><div class="study-label">Estudio de Mercado · Tirzepatida · CDE</div><h1 class="header-h1">SEGUNDA TOMA 2.0<br/>ESTUDIO DE MERCADO — TIRZEPATIDA<br/><span style="font-size:14px;font-weight:400;color:var(--tx-l);">Dinámica de demanda inducida por frontera en CDE</span></h1></div><div class="header-logo-box"><img alt="Quimfa" src="https://i0.wp.com/logoroga.com/wp-content/uploads/2015/05/quimfa-1.jpg?resize=768%2C768&ssl=1"/><div class="header-marca">Marca de estudio: <strong>Tirzec</strong></div></div></div>
 <div class="header-meta"><div class="hm-item"><div class="hm-label">Elaborado por</div><div class="hm-value">Arvi Company</div></div><div class="hm-item"><div class="hm-label">Cliente</div><div class="hm-value">Quimfa Paraguay</div></div><div class="hm-item"><div class="hm-label">Modalidad</div><div class="hm-value">Evaluación puntual — Toma II</div></div><div class="hm-item"><div class="hm-label">Período</div><div class="hm-value">Mayo - Junio 2026</div></div></div></div>
@@ -142,9 +142,8 @@ if(prompt("Usuario:")!==USER||prompt("Contraseña:")!==PASS){document.body.inner
 <div class="toma-view active" id="view-toma2">
 <section class="section sub-panorama active" id="sec-panorama-t2">
 <div class="sec-head"><h2>Panorama General (Toma II)</h2><p>Indicadores clave · CDE · Mayo-Junio 2026 · Extrapolación CDE total</p></div>
-<div class="kpi-strip">
-<div class="kpi"><div class="kpi-lbl">Clientes Encuestados</div><div class="kpi-val">257</div><div class="kpi-sub">7 locales</div></div>
-<div class="kpi"><div class="kpi-lbl">Compraron</div><div class="kpi-val">250</div><div class="kpi-sub">97.3%</div></div>
+<div class="kpi-strip" style="grid-template-columns:repeat(4,1fr);">
+<div class="kpi"><div class="kpi-lbl">Clientes Encuestados</div><div class="kpi-val">250</div><div class="kpi-sub">Resultados encuestas</div></div>
 <div class="kpi accent"><div class="kpi-lbl">Locales</div><div class="kpi-val">7</div></div>
 <div class="kpi gold"><div class="kpi-lbl">Mercado Estimado</div><div class="kpi-val"><span id="ext-kpi-cajas">303</span><sup>k</sup></div><div class="kpi-sub">cajas/mes</div></div>
 <div class="kpi"><div class="kpi-lbl">Precio Promedio</div><div class="kpi-val">USD 83.3</div><div class="kpi-sub">por caja</div></div>
@@ -162,7 +161,7 @@ if(prompt("Usuario:")!==USER||prompt("Contraseña:")!==PASS){document.body.inner
 </section>
 <section class="section sub-marcas" id="sec-marcas-t2">
 <div class="sec-head"><h2>Marcas (Toma II)</h2><p>Market share de compra declarada · N=250</p></div>
-<div class="kpi-strip" style="grid-template-columns:repeat(4,1fr);"><div class="kpi"><div class="kpi-lbl">Marcas Relevadas</div><div class="kpi-val">7</div></div><div class="kpi accent"><div class="kpi-lbl">#1 Marca</div><div class="kpi-val">T.G.</div><div class="kpi-sub">46% · 115 compras</div></div><div class="kpi"><div class="kpi-lbl">#2 Marca</div><div class="kpi-val">Lipoless</div><div class="kpi-sub">24% · 60 compras</div></div><div class="kpi gold"><div class="kpi-lbl">#3 Marca Tirzec</div><div class="kpi-val">22% · 56 compras</div></div></div>
+<div class="kpi-strip" style="grid-template-columns:repeat(4,1fr);"><div class="kpi"><div class="kpi-lbl">Marcas Relevadas</div><div class="kpi-val">7</div></div><div class="kpi accent"><div class="kpi-lbl">#1 Marca</div><div class="kpi-val">T.G.</div><div class="kpi-sub">46%</div></div><div class="kpi"><div class="kpi-lbl">#2 Marca</div><div class="kpi-val">Lipoless</div><div class="kpi-sub">24%</div></div><div class="kpi gold"><div class="kpi-lbl">#3 Marca Tirzec</div><div class="kpi-val">22%</div></div></div>
 <div class="g2"><div class="card"><div class="card-head"><div class="card-title">Market Share — Compra Declarada</div><div class="card-sub">Distribución por marca · N=250</div></div><div class="chart-wrap"><canvas id="cMarcaShareT2"></canvas></div></div><div class="card"><div class="card-head"><div class="card-title">Cajas/Mes por Marca</div><div class="card-sub">Módulo C integrado · valores absolutos</div></div><div class="chart-wrap"><canvas id="cCajasT2"></canvas></div></div></div>
 <div class="card"><div class="card-head"><div class="card-title">Ranking Detallado de Marcas</div><div class="card-sub">Compras declaradas Módulo B · participación y volumen</div></div><div style="margin-top:8px;"><div class="rank-list" id="rankMarcasT2"></div></div></div>
 </section>
@@ -334,7 +333,7 @@ new Chart(document.getElementById('cMarcaShareT2'),{type:'bar',data:{labels:["T.
 new Chart(document.getElementById('cCajasT2'),{type:'bar',data:{labels:["T.G.","Lipoless","Tirzec","Tirzedral","Gluconex"],datasets:[{label:'Cajas/mes',data:[246813,128772,120187,21462,6439],backgroundColor:COLS.map(c=>c+'AA')}]},options:baseOpts(false)});
 const N_T2=250; // base compras declaradas Módulo B
 const marcasII=[{n:"T.G.",c:115,cajas:246813},{n:"Lipoless",c:60,cajas:128772},{n:"Tirzec",c:56,cajas:120187},{n:"Tirzedral",c:10,cajas:21462},{n:"Gluconex",c:3,cajas:6439},{n:"Otros",c:6,cajas:12876}].map(m=>({...m,pct:+(m.c/N_T2*100).toFixed(0)}));
-const rlII=document.getElementById('rankMarcasT2');rlII.innerHTML='';marcasII.forEach((m,i)=>{rlII.innerHTML+=`<div class="rank-item"><span class="rank-num">${i+1}</span><span class="rank-name">${m.n}</span><div class="rank-bar-wrap"><div class="rank-bar" style="width:${(m.pct/47)*100}%;background:${COLS[i%COLS.length]};"></div></div><span class="rank-pct">${m.pct}%</span><span style="font-size:10px;width:80px;text-align:right;">${m.c} compras</span><span style="font-size:10px;width:80px;text-align:right;">${m.cajas.toLocaleString()} caj/mes</span></div>`;});
+const rlII=document.getElementById('rankMarcasT2');rlII.innerHTML='';marcasII.forEach((m,i)=>{rlII.innerHTML+=`<div class="rank-item"><span class="rank-num">${i+1}</span><span class="rank-name">${m.n}</span><div class="rank-bar-wrap"><div class="rank-bar" style="width:${(m.pct/47)*100}%;background:${COLS[i%COLS.length]};"></div></div><span class="rank-pct">${m.pct}%</span></div>`;});
 const preciosLocalII=[{n:"Farma Shop Dior",v:98},{n:"Triunfo",v:83},{n:"Farma Util",v:83},{n:"FarmaCon",v:82},{n:"ICLINIC",v:82},{n:"Cell Shopp",v:80},{n:"Columbia",v:75}];
 const plII=document.getElementById('precioLocalBarsT2');plII.innerHTML='';preciosLocalII.forEach((p,i)=>{plII.innerHTML+=`<div class="price-bar"><div class="price-lbl">${p.n}</div><div class="price-track"><div class="price-fill" style="width:${(p.v/120)*100}%;background:${COLS[i%COLS.length]};"></div></div><div class="price-val">USD ${p.v}</div></div>`;});
 const preciosMarcaII=[{n:"Tirzepatida zphc",v:107},{n:"Tirzedral",v:85},{n:"Gluconex",v:85},{n:"Lipoland",v:85},{n:"Slimax",v:85},{n:"T.G.",v:85},{n:"Tirzec",v:81},{n:"Lipoless",v:81}];
