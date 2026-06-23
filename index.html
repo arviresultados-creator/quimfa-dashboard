@@ -143,32 +143,32 @@ if(prompt("Usuario:")!==USER||prompt("Contraseña:")!==PASS){document.body.inner
 <section class="section sub-panorama active" id="sec-panorama-t2">
 <div class="sec-head"><h2>Panorama General (Toma II)</h2><p>Indicadores clave · CDE · Mayo-Junio 2026 · Extrapolación CDE total</p></div>
 <div class="kpi-strip">
-<div class="kpi"><div class="kpi-lbl">Clientes Encuestados</div><div class="kpi-val">227</div><div class="kpi-sub">7 locales</div></div>
-<div class="kpi"><div class="kpi-lbl">Compraron</div><div class="kpi-val">227</div><div class="kpi-sub">100%</div></div>
+<div class="kpi"><div class="kpi-lbl">Clientes Encuestados</div><div class="kpi-val">257</div><div class="kpi-sub">7 locales</div></div>
+<div class="kpi"><div class="kpi-lbl">Compraron</div><div class="kpi-val">250</div><div class="kpi-sub">97.3%</div></div>
 <div class="kpi accent"><div class="kpi-lbl">Locales</div><div class="kpi-val">7</div></div>
-<div class="kpi gold"><div class="kpi-lbl">Mercado Estimado</div><div class="kpi-val">303<sup>k</sup></div><div class="kpi-sub">cajas/mes</div></div>
-<div class="kpi"><div class="kpi-lbl">Precio Promedio</div><div class="kpi-val">USD 83.6</div><div class="kpi-sub">por caja</div></div>
+<div class="kpi gold"><div class="kpi-lbl">Mercado Estimado</div><div class="kpi-val"><span id="ext-kpi-cajas">303</span><sup>k</sup></div><div class="kpi-sub">cajas/mes</div></div>
+<div class="kpi"><div class="kpi-lbl">Precio Promedio</div><div class="kpi-val">USD 83.3</div><div class="kpi-sub">por caja</div></div>
 </div>
 <div class="mercado-tabla-wrap"><div class="mercado-tabla-title">MOVIMIENTO MENSUAL ESTIMADO DEL MERCADO EN CDE · SEGÚN CATEGORÍAS · <span style="text-decoration:underline;">EXTRAPOLACIÓN</span></div>
-<table class="mercado-tabla"><thead><tr><th></th><th>Volumen de ventas (cajas)</th><th>Facturación (USD)</th><th>Cantidad de Clientes</th></tr></thead><tbody><tr><td class="mercado-row-lbl">Mensual</td><td>303k</td><td>USD 29.5M</td><td>51.9k</td></tr></tbody></table></div>
-<div class="g2"><div class="card"><div class="card-head"><div class="card-title">Motivo Principal</div><div class="card-sub">N=227</div></div><div class="chart-wrap"><canvas id="cMotivoT2"></canvas></div></div><div class="card"><div class="card-head"><div class="card-title">Nacionalidad</div><div class="card-sub">N=227</div></div><div class="chart-wrap"><canvas id="cNacT2"></canvas></div></div></div>
-<div class="g2"><div class="card"><div class="card-head"><div class="card-title">Sexo</div><div class="card-sub">N=227</div></div><div class="chart-wrap"><canvas id="cSexoT2"></canvas></div></div><div class="card"><div class="card-head"><div class="card-title">Frecuencia</div><div class="card-sub">N=227</div></div><div class="chart-wrap"><canvas id="cFrecT2"></canvas></div></div></div>
+<table class="mercado-tabla"><thead><tr><th></th><th>Volumen de ventas (cajas)</th><th>Facturación (USD)</th><th>Cantidad de Clientes</th></tr></thead><tbody><tr><td class="mercado-row-lbl">Mensual</td><td id="ext-vol">303k</td><td id="ext-fact">USD 29.5M</td><td id="ext-cli">51.9k</td></tr></tbody></table></div>
+<div class="g2"><div class="card"><div class="card-head"><div class="card-title">Motivo Principal</div><div class="card-sub">N=250</div></div><div class="chart-wrap"><canvas id="cMotivoT2"></canvas></div></div><div class="card"><div class="card-head"><div class="card-title">Nacionalidad</div><div class="card-sub">N=250</div></div><div class="chart-wrap"><canvas id="cNacT2"></canvas></div></div></div>
+<div class="g2"><div class="card"><div class="card-head"><div class="card-title">Sexo</div><div class="card-sub">N=250</div></div><div class="chart-wrap"><canvas id="cSexoT2"></canvas></div></div><div class="card"><div class="card-head"><div class="card-title">Frecuencia</div><div class="card-sub">N=250</div></div><div class="chart-wrap"><canvas id="cFrecT2"></canvas></div></div></div>
 </section>
 <section class="section sub-clientes" id="sec-clientes-t2">
-<div class="sec-head"><h2>Clientes (Toma II)</h2><p>N=227</p></div>
-<div class="kpi-strip" style="grid-template-columns:repeat(4,1fr);"><div class="kpi"><div class="kpi-lbl">Edad Promedio</div><div class="kpi-val">39.9</div></div><div class="kpi accent"><div class="kpi-lbl">Uso propio</div><div class="kpi-val">62.6%</div></div><div class="kpi"><div class="kpi-lbl">1er Factor</div><div class="kpi-val">63.4%</div></div><div class="kpi"><div class="kpi-lbl">Precio Adecuado</div><div class="kpi-val">61.7%</div></div></div>
-<div class="g2"><div class="card"><div class="card-head"><div class="card-title">Factor Decisivo de Compra</div><div class="card-sub">Principal motivador declarado · N=227</div></div><div class="chart-wrap"><canvas id="cFactorT2"></canvas></div></div><div class="card"><div class="card-head"><div class="card-title">Percepción del Precio</div><div class="card-sub">Evaluación precio-calidad · N=227</div></div><div class="chart-wrap"><canvas id="cPrecioT2"></canvas></div></div></div>
-<div class="g2"><div class="card"><div class="card-head"><div class="card-title">¿Quién recomendó el producto?</div><div class="card-sub">Fuente de prescripción · N=227</div></div><div class="chart-wrap"><canvas id="cC1T2"></canvas></div></div><div class="card"><div class="card-head"><div class="card-title">Propósito de la Compra</div><div class="card-sub">Uso propio vs familiar vs tercero · N=227</div></div><div class="chart-wrap"><canvas id="cA2T2"></canvas></div></div></div>
+<div class="sec-head"><h2>Clientes (Toma II)</h2><p>N=250</p></div>
+<div class="kpi-strip" style="grid-template-columns:repeat(4,1fr);"><div class="kpi"><div class="kpi-lbl">Edad Promedio</div><div class="kpi-val">39.9</div></div><div class="kpi accent"><div class="kpi-lbl">Uso propio</div><div class="kpi-val">63.2%</div></div><div class="kpi"><div class="kpi-lbl">1er Factor</div><div class="kpi-val">64.4%</div></div><div class="kpi"><div class="kpi-lbl">Precio Adecuado</div><div class="kpi-val">60.0%</div></div></div>
+<div class="g2"><div class="card"><div class="card-head"><div class="card-title">Factor Decisivo de Compra</div><div class="card-sub">Principal motivador declarado · N=250</div></div><div class="chart-wrap"><canvas id="cFactorT2"></canvas></div></div><div class="card"><div class="card-head"><div class="card-title">Percepción del Precio</div><div class="card-sub">Evaluación precio-calidad · N=250</div></div><div class="chart-wrap"><canvas id="cPrecioT2"></canvas></div></div></div>
+<div class="g2"><div class="card"><div class="card-head"><div class="card-title">¿Quién recomendó el producto?</div><div class="card-sub">Fuente de prescripción · N=250</div></div><div class="chart-wrap"><canvas id="cC1T2"></canvas></div></div><div class="card"><div class="card-head"><div class="card-title">Propósito de la Compra</div><div class="card-sub">Uso propio vs familiar vs tercero · N=250</div></div><div class="chart-wrap"><canvas id="cA2T2"></canvas></div></div></div>
 </section>
 <section class="section sub-marcas" id="sec-marcas-t2">
-<div class="sec-head"><h2>Marcas (Toma II)</h2><p>Market share de compra declarada · N=227</p></div>
-<div class="kpi-strip" style="grid-template-columns:repeat(4,1fr);"><div class="kpi"><div class="kpi-lbl">Marcas Relevadas</div><div class="kpi-val">7</div></div><div class="kpi accent"><div class="kpi-lbl">#1 Marca</div><div class="kpi-val">T.G.</div><div class="kpi-sub">46.3% · 105 compras</div></div><div class="kpi"><div class="kpi-lbl">#2 Marca</div><div class="kpi-val">Lipoless</div><div class="kpi-sub">23.3% · 53 compras</div></div><div class="kpi gold"><div class="kpi-lbl">#3 Marca Tirzec</div><div class="kpi-val">22.0% · 50 compras</div></div></div>
-<div class="g2"><div class="card"><div class="card-head"><div class="card-title">Market Share — Compra Declarada</div><div class="card-sub">Distribución por marca · N=227</div></div><div class="chart-wrap"><canvas id="cMarcaShareT2"></canvas></div></div><div class="card"><div class="card-head"><div class="card-title">Cajas/Mes por Marca</div><div class="card-sub">Módulo C integrado · valores absolutos</div></div><div class="chart-wrap"><canvas id="cCajasT2"></canvas></div></div></div>
+<div class="sec-head"><h2>Marcas (Toma II)</h2><p>Market share de compra declarada · N=250</p></div>
+<div class="kpi-strip" style="grid-template-columns:repeat(4,1fr);"><div class="kpi"><div class="kpi-lbl">Marcas Relevadas</div><div class="kpi-val">7</div></div><div class="kpi accent"><div class="kpi-lbl">#1 Marca</div><div class="kpi-val">T.G.</div><div class="kpi-sub">46% · 115 compras</div></div><div class="kpi"><div class="kpi-lbl">#2 Marca</div><div class="kpi-val">Lipoless</div><div class="kpi-sub">24% · 60 compras</div></div><div class="kpi gold"><div class="kpi-lbl">#3 Marca Tirzec</div><div class="kpi-val">22% · 56 compras</div></div></div>
+<div class="g2"><div class="card"><div class="card-head"><div class="card-title">Market Share — Compra Declarada</div><div class="card-sub">Distribución por marca · N=250</div></div><div class="chart-wrap"><canvas id="cMarcaShareT2"></canvas></div></div><div class="card"><div class="card-head"><div class="card-title">Cajas/Mes por Marca</div><div class="card-sub">Módulo C integrado · valores absolutos</div></div><div class="chart-wrap"><canvas id="cCajasT2"></canvas></div></div></div>
 <div class="card"><div class="card-head"><div class="card-title">Ranking Detallado de Marcas</div><div class="card-sub">Compras declaradas Módulo B · participación y volumen</div></div><div style="margin-top:8px;"><div class="rank-list" id="rankMarcasT2"></div></div></div>
 </section>
 <section class="section sub-precios" id="sec-precios-t2">
 <div class="sec-head"><h2>Precios (Toma II)</h2><p>Precio promedio por caja en USD</p></div>
-<div class="kpi-strip" style="grid-template-columns:repeat(3,1fr);"><div class="kpi"><div class="kpi-lbl">Promedio CDE</div><div class="kpi-val">USD 83.6</div></div><div class="kpi accent"><div class="kpi-lbl">Más alto local</div><div class="kpi-val">USD 101.4</div><div class="kpi-sub">Farma Shop Dior</div></div><div class="kpi gold"><div class="kpi-lbl">Más alto marca</div><div class="kpi-val">USD 106.9</div><div class="kpi-sub">Tirzepatida zphc</div></div></div>
+<div class="kpi-strip" style="grid-template-columns:repeat(3,1fr);"><div class="kpi"><div class="kpi-lbl">Promedio CDE</div><div class="kpi-val">USD 83.3</div></div><div class="kpi accent"><div class="kpi-lbl">Más alto local</div><div class="kpi-val">USD 98</div><div class="kpi-sub">Farma Shop Dior</div></div><div class="kpi gold"><div class="kpi-lbl">Más alto marca</div><div class="kpi-val">USD 107</div><div class="kpi-sub">Tirzepatida zphc</div></div></div>
 <div class="g2"><div class="card"><div class="card-head"><div class="card-title">Precio por Local (USD)</div></div><div id="precioLocalBarsT2"></div></div><div class="card"><div class="card-head"><div class="card-title">Precio por Marca (USD)</div></div><div id="precioMarcaBarsT2"></div></div></div>
 <div class="card"><div class="card-head"><div class="card-title">Percepción Precio</div></div><div class="chart-wrap"><canvas id="cPrecioDetalleT2"></canvas></div></div>
 </section>
@@ -213,7 +213,7 @@ if(prompt("Usuario:")!==USER||prompt("Contraseña:")!==PASS){document.body.inner
       <div style="font-weight: 700; margin-bottom: 8px;">Encuestas a clientes</div>
       <div style="font-size: 11px; color: var(--tx-l);">Entrevistas de salida a clientes de los siete locales, considerando cuota y brecha temporal entre cada toma.</div>
       <div style="margin-top: 12px; padding-top: 8px; border-top: 1px solid var(--border-l); font-size: 10px; color: var(--tx-xs);">
-        👥 Muestra: 284 (Toma I) · 227 (Toma II) · Identificación de patrones comportamentales de compra
+        👥 Muestra: 284 (Toma I) · 250 (Toma II) · Identificación de patrones comportamentales de compra
       </div>
     </div>
 
@@ -236,7 +236,7 @@ if(prompt("Usuario:")!==USER||prompt("Contraseña:")!==PASS){document.body.inner
       </thead>
       <tbody>
         <tr><td class="name">Módulo A</td><td>Entrevistas a responsables de locales</td><td class="right"><span class="badge ok">✓ 7 entrevistas</span></td><td class="right"><span class="badge warn">6 entrevistas</span></td></tr>
-        <tr><td class="name">Módulo B</td><td>Encuestas a clientes finales compradores</td><td class="right"><span class="badge ok">✓ 284 encuestas</span></td><td class="right"><span class="badge warn">227 encuestas</span></td></tr>
+        <tr><td class="name">Módulo B</td><td>Encuestas a clientes finales compradores</td><td class="right"><span class="badge ok">✓ 284 encuestas</span></td><td class="right"><span class="badge warn">250 encuestas</span></td></tr>
         <tr><td class="name">Módulo C</td><td>Relevamiento y extrapolación de ventas</td><td class="right"><span class="badge ok">✓ 7 locales</span></td><td class="right"><span class="badge warn">7 locales</span></td></tr>
       </tbody>
     </table>
@@ -249,14 +249,14 @@ if(prompt("Usuario:")!==USER||prompt("Contraseña:")!==PASS){document.body.inner
       <div class="card-sub">Validación de consistencia de datos extrapolados al universo de farmacias</div>
     </div>
     <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; text-align: center;">
-      <div><div style="font-size: 10px; color: var(--tx-xs);">Visita clientes</div><div style="font-size: 28px; font-weight: 700; color: var(--q-sky);">51.921</div><div style="font-size: 10px;">clientes/mes</div></div>
-      <div><div style="font-size: 10px; color: var(--tx-xs);">Cajas por clientes</div><div style="font-size: 28px; font-weight: 700; color: var(--q-sky);">302.870</div><div style="font-size: 10px;">cajas/mes</div></div>
-      <div><div style="font-size: 10px; color: var(--tx-xs);">Total Ventas</div><div style="font-size: 28px; font-weight: 700; color: var(--q-sky);">USD 29.534.400</div><div style="font-size: 10px;">ventas/mes</div></div>
+      <div><div style="font-size: 10px; color: var(--tx-xs);">Visita clientes</div><div style="font-size: 28px; font-weight: 700; color: var(--q-sky);" id="ext-visitas">51.921</div><div style="font-size: 10px;">clientes/mes</div></div>
+      <div><div style="font-size: 10px; color: var(--tx-xs);">Cajas por clientes</div><div style="font-size: 28px; font-weight: 700; color: var(--q-sky);" id="ext-cajas">302.870</div><div style="font-size: 10px;">cajas/mes</div></div>
+      <div><div style="font-size: 10px; color: var(--tx-xs);">Total Ventas</div><div style="font-size: 28px; font-weight: 700; color: var(--q-sky);" id="ext-ventas">USD 29.534.400</div><div style="font-size: 10px;">ventas/mes</div></div>
     </div>
     <div style="margin-top: 16px; padding: 12px; background: var(--bg); border-radius: 6px; display: flex; justify-content: space-between; text-align: center;">
-      <div style="flex:1;"><strong>B/A = Cajas promedio cliente</strong><div style="font-size: 24px; font-weight: 700; color: var(--q-navy);">5,8</div><div style="font-size: 10px;">unidades/cliente</div></div>
+      <div style="flex:1;"><strong>B/A = Cajas promedio cliente</strong><div style="font-size: 24px; font-weight: 700; color: var(--q-navy);" id="ext-ba">5,8</div><div style="font-size: 10px;">unidades/cliente</div></div>
       <div style="width:1px; background:var(--border);"></div>
-      <div style="flex:1;"><strong>C/B = Precio promedio caja</strong><div style="font-size: 24px; font-weight: 700; color: var(--q-navy);">USD 97</div><div style="font-size: 10px;">por caja</div></div>
+      <div style="flex:1;"><strong>C/B = Precio promedio caja</strong><div style="font-size: 24px; font-weight: 700; color: var(--q-navy);" id="ext-cb">USD 97</div><div style="font-size: 10px;">por caja</div></div>
     </div>
   </div>
 
@@ -322,37 +322,63 @@ const localesI=[{n:'Farmacia Pink',enc:41,cajas:2160,precio:85.0,br:80.5},{n:'Ce
 const tbI=document.getElementById('tablaLocales');localesI.forEach(l=>{tbI.innerHTML+=`<tr><td class="name">${l.n} ${tomaTagI[l.n]||''}</td><td class="right num">${l.enc}</td><td class="right num">${l.cajas.toLocaleString()}</td><td class="right num">${l.precio}</td><td class="right num">${l.br}%</td>`;});
 
 // TOMA II CHARTS
-new Chart(document.getElementById('cMotivoT2'),{type:'doughnut',data:{labels:["Pérdida de peso","Recomendación médica","Control de diabetes","Otros"],datasets:[{data:[70.0,18.5,6.6,4.9],backgroundColor:COLS}]},options:pieOpts});
-new Chart(document.getElementById('cNacT2'),{type:'doughnut',data:{labels:["Brasilera","Argentina","Paraguaya"],datasets:[{data:[93.4,3.1,3.5],backgroundColor:[SKY,BLUE,PURPLE]}]},options:pieOpts});
-new Chart(document.getElementById('cSexoT2'),{type:'doughnut',data:{labels:["Femenino","Masculino"],datasets:[{data:[56.8,43.2],backgroundColor:[PURPLE,SKY]}]},options:pieOpts});
-new Chart(document.getElementById('cFrecT2'),{type:'bar',data:{labels:["Ocasionalmente","Cada mes","Cada 2-3 meses","Primera compra","Cada semana","Cada día"],datasets:[{label:'% Clientes',data:[50.7,18.9,17.2,10.1,2.2,0.9],backgroundColor:SKY+'BB'}]},options:{...baseOpts(false),indexAxis:'y',plugins:{datalabels:horizontalDataLabels},scales:{x:{ticks:{callback:v=>v+'%'}},y:{grid:{display:false}}}}});
-new Chart(document.getElementById('cFactorT2'),{type:'bar',data:{labels:["Resultados para bajar de peso","Recomendación del médico","Opiniones de otras personas","Control de glucosa","Precio del medicamento","Disponibilidad en farmacia"],datasets:[{label:'% Clientes',data:[63.4,30.0,2.2,2.2,1.8,0.4],backgroundColor:BLUE+'CC'}]},options:{...baseOpts(false),indexAxis:'y',plugins:{datalabels:horizontalDataLabels},scales:{x:{ticks:{callback:v=>v+'%'}},y:{grid:{display:false}}}}});
-new Chart(document.getElementById('cPrecioT2'),{type:'doughnut',data:{labels:["Adecuado","Barato","Caro","Muy barato"],datasets:[{data:[61.7,22.5,11.9,4.0],backgroundColor:[SKY,SKY2,PURPLE,'#0099CC55']}]},options:pieOpts});
-new Chart(document.getElementById('cC1T2'),{type:'bar',data:{labels:["Médico especialista","Decisión propia","Amigo/familiar","Médico clínico","Farmacéutico","Redes sociales","Nutricionista","Otros"],datasets:[{label:'% Clientes',data:[38.8,22.5,19.8,11.5,1.3,1.3,1.3,3.5],backgroundColor:NAVY+'BB'}]},options:{...baseOpts(false),indexAxis:'y',plugins:{datalabels:horizontalDataLabels},scales:{x:{ticks:{callback:v=>v+'%'}},y:{grid:{display:false}}}}});
-new Chart(document.getElementById('cA2T2'),{type:'doughnut',data:{labels:["Uso propio","Para un familiar","Uso propio y familiar","Para otra persona"],datasets:[{data:[62.6,18.1,12.8,6.6],backgroundColor:[NAVY,SKY,PURPLE,SKY2]}]},options:pieOpts});
-new Chart(document.getElementById('cMarcaShareT2'),{type:'bar',data:{labels:["T.G.","Lipoless","Tirzec","Tirzedral","Gluconex","Otros"],datasets:[{label:'Compras declaradas',data:[105,53,50,10,3,6],backgroundColor:COLS.map(c=>c+'AA'),borderColor:COLS,borderWidth:1,borderRadius:4}]},options:baseOpts(false)});
-new Chart(document.getElementById('cCajasT2'),{type:'bar',data:{labels:["T.G.","Lipoless","Tirzec","Tirzedral","Gluconex"],datasets:[{label:'Cajas/mes',data:[124000,82000,68000,15000,5000],backgroundColor:COLS.map(c=>c+'AA')}]},options:baseOpts(false)});
-const marcasII=[{n:"T.G.",pct:46.3,c:105,cajas:124000},{n:"Lipoless",pct:23.3,c:53,cajas:82000},{n:"Tirzec",pct:22.0,c:50,cajas:68000},{n:"Tirzedral",pct:4.4,c:10,cajas:15000},{n:"Gluconex",pct:1.3,c:3,cajas:5000},{n:"Otros",pct:2.7,c:6,cajas:0}];
+new Chart(document.getElementById('cMotivoT2'),{type:'doughnut',data:{labels:["Resultados bajar peso","Recomendación médica","Control de glucosa","Otro"],datasets:[{data:[69,22,4,4],backgroundColor:COLS}]},options:pieOpts});
+new Chart(document.getElementById('cNacT2'),{type:'doughnut',data:{labels:["Brasilera","Argentina","Paraguaya"],datasets:[{data:[92,5,3],backgroundColor:[SKY,BLUE,PURPLE]}]},options:pieOpts});
+new Chart(document.getElementById('cSexoT2'),{type:'doughnut',data:{labels:["Femenino","Masculino"],datasets:[{data:[54,46],backgroundColor:[PURPLE,SKY]}]},options:pieOpts});
+new Chart(document.getElementById('cFrecT2'),{type:'bar',data:{labels:["Ocasionalmente","Cada mes","Cada 2-3 meses","Primera compra","Cada semana","Cada día"],datasets:[{label:'% Clientes',data:[47.6,18.4,21.6,9.6,2.0,0.8],backgroundColor:SKY+'BB'}]},options:{...baseOpts(false),indexAxis:'y',plugins:{datalabels:horizontalDataLabels},scales:{x:{ticks:{callback:v=>v+'%'}},y:{grid:{display:false}}}}});
+new Chart(document.getElementById('cFactorT2'),{type:'bar',data:{labels:["Resultados para bajar de peso","Recomendación del médico","Opiniones de otras personas","Control de glucosa","Precio del medicamento","Disponibilidad en farmacia"],datasets:[{label:'% Clientes',data:[64.4,28.8,2.0,2.8,1.6,0.4],backgroundColor:BLUE+'CC'}]},options:{...baseOpts(false),indexAxis:'y',plugins:{datalabels:horizontalDataLabels},scales:{x:{ticks:{callback:v=>v+'%'}},y:{grid:{display:false}}}}});
+new Chart(document.getElementById('cPrecioT2'),{type:'doughnut',data:{labels:["Adecuado","Barato","Caro","Muy barato"],datasets:[{data:[60.0,23.6,11.6,4.8],backgroundColor:[SKY,SKY2,PURPLE,'#0099CC55']}]},options:pieOpts});
+new Chart(document.getElementById('cC1T2'),{type:'bar',data:{labels:["Médico especialista","Decisión propia","Amigo/familiar","Médico clínico","Farmacéutico","Redes sociales","Nutricionista","Otros"],datasets:[{label:'% Clientes',data:[41.0,21.7,18.5,12.0,1.6,1.2,1.2,2.8],backgroundColor:NAVY+'BB'}]},options:{...baseOpts(false),indexAxis:'y',plugins:{datalabels:horizontalDataLabels},scales:{x:{ticks:{callback:v=>v+'%'}},y:{grid:{display:false}}}}});
+new Chart(document.getElementById('cA2T2'),{type:'doughnut',data:{labels:["Uso propio","Para un familiar","Uso propio y familiar","Para otra persona"],datasets:[{data:[63.2,18.0,12.4,6.4],backgroundColor:[NAVY,SKY,PURPLE,SKY2]}]},options:pieOpts});
+new Chart(document.getElementById('cMarcaShareT2'),{type:'bar',data:{labels:["T.G.","Lipoless","Tirzec","Tirzedral","Gluconex","Otros"],datasets:[{label:'Compras declaradas',data:[115,60,56,10,3,6],backgroundColor:COLS.map(c=>c+'AA'),borderColor:COLS,borderWidth:1,borderRadius:4}]},options:baseOpts(false)});
+new Chart(document.getElementById('cCajasT2'),{type:'bar',data:{labels:["T.G.","Lipoless","Tirzec","Tirzedral","Gluconex"],datasets:[{label:'Cajas/mes',data:[246813,128772,120187,21462,6439],backgroundColor:COLS.map(c=>c+'AA')}]},options:baseOpts(false)});
+const N_T2=250; // base compras declaradas Módulo B
+const marcasII=[{n:"T.G.",c:115,cajas:246813},{n:"Lipoless",c:60,cajas:128772},{n:"Tirzec",c:56,cajas:120187},{n:"Tirzedral",c:10,cajas:21462},{n:"Gluconex",c:3,cajas:6439},{n:"Otros",c:6,cajas:12876}].map(m=>({...m,pct:+(m.c/N_T2*100).toFixed(0)}));
 const rlII=document.getElementById('rankMarcasT2');rlII.innerHTML='';marcasII.forEach((m,i)=>{rlII.innerHTML+=`<div class="rank-item"><span class="rank-num">${i+1}</span><span class="rank-name">${m.n}</span><div class="rank-bar-wrap"><div class="rank-bar" style="width:${(m.pct/47)*100}%;background:${COLS[i%COLS.length]};"></div></div><span class="rank-pct">${m.pct}%</span><span style="font-size:10px;width:80px;text-align:right;">${m.c} compras</span><span style="font-size:10px;width:80px;text-align:right;">${m.cajas.toLocaleString()} caj/mes</span></div>`;});
-const preciosLocalII=[{n:"Farma Shop Dior",v:101.4},{n:"Farma Util",v:83.5},{n:"Triunfo",v:83.3},{n:"ICLINIC",v:82.3},{n:"FarmaCon",v:81.6},{n:"Cell Shopp",v:80.4},{n:"Columbia",v:75.2}];
+const preciosLocalII=[{n:"Farma Shop Dior",v:98},{n:"Triunfo",v:83},{n:"Farma Util",v:83},{n:"FarmaCon",v:82},{n:"ICLINIC",v:82},{n:"Cell Shopp",v:80},{n:"Columbia",v:75}];
 const plII=document.getElementById('precioLocalBarsT2');plII.innerHTML='';preciosLocalII.forEach((p,i)=>{plII.innerHTML+=`<div class="price-bar"><div class="price-lbl">${p.n}</div><div class="price-track"><div class="price-fill" style="width:${(p.v/120)*100}%;background:${COLS[i%COLS.length]};"></div></div><div class="price-val">USD ${p.v}</div></div>`;});
-const preciosMarcaII=[{n:"Tirzepatida zphc",v:106.9},{n:"Tirzedral",v:85.1},{n:"Gluconex",v:85.0},{n:"Lipoland",v:85.0},{n:"Slimax",v:85.0},{n:"T.G.",v:84.5},{n:"Lipoless",v:82.8},{n:"Tirzec",v:81.1}];
+const preciosMarcaII=[{n:"Tirzepatida zphc",v:107},{n:"Tirzedral",v:85},{n:"Gluconex",v:85},{n:"Lipoland",v:85},{n:"Slimax",v:85},{n:"T.G.",v:85},{n:"Tirzec",v:81},{n:"Lipoless",v:81}];
 const pmII=document.getElementById('precioMarcaBarsT2');pmII.innerHTML='';preciosMarcaII.forEach((p,i)=>{pmII.innerHTML+=`<div class="price-bar"><div class="price-lbl">${p.n}</div><div class="price-track"><div class="price-fill" style="width:${(p.v/115)*100}%;background:${COLS[i%COLS.length]};"></div></div><div class="price-val">USD ${p.v}</div></div>`;});
-new Chart(document.getElementById('cPrecioDetalleT2'),{type:'bar',data:{labels:["Adecuado","Barato","Caro","Muy barato"],datasets:[{label:'% Clientes',data:[61.7,22.5,11.9,4.0],backgroundColor:COLS.map(c=>c+'AA')}]},options:{...baseOpts(false),plugins:{datalabels:barDataLabels},scales:{y:{ticks:{callback:v=>v+'%'}}}}});
-new Chart(document.getElementById('cLocalEncT2'),{type:'bar',data:{labels:["Columbia","Cell Shopp","FarmaCon","ICLINIC","Farma Shop Dior","Farma Util","Triunfo"],datasets:[{label:'Encuestas (n)',data:[36,35,35,35,30,29,27],backgroundColor:COLS.map(c=>c+'AA')}]},options:{...baseOpts(false),plugins:{datalabels:{...barDataLabels,formatter:v=>v}}}});
-const cajasLocalIIMuestra=[{n:"Cell Shopp",cajas:28800},{n:"Columbia",cajas:28800},{n:"Farma Shop Dior",cajas:2280},{n:"Farma Util",cajas:3600},{n:"FarmaCon",cajas:6000},{n:"ICLINIC",cajas:0},{n:"Triunfo",cajas:36000}];
+new Chart(document.getElementById('cPrecioDetalleT2'),{type:'bar',data:{labels:["Adecuado","Barato","Caro","Muy barato"],datasets:[{label:'% Clientes',data:[60.0,23.6,11.6,4.8],backgroundColor:COLS.map(c=>c+'AA')}]},options:{...baseOpts(false),plugins:{datalabels:barDataLabels},scales:{y:{ticks:{callback:v=>v+'%'}}}}});
+new Chart(document.getElementById('cLocalEncT2'),{type:'bar',data:{labels:["Farma Util","Columbia","Cell Shopp","Farma Shop Dior","FarmaCon","ICLINIC","Triunfo"],datasets:[{label:'Encuestas (n)',data:[39,36,35,35,35,35,35],backgroundColor:COLS.map(c=>c+'AA')}]},options:{...baseOpts(false),plugins:{datalabels:{...barDataLabels,formatter:v=>v}}}});
+const cajasLocalIIMuestra=[{n:"Cell Shopp",cajas:165730},{n:"Columbia",cajas:165730},{n:"Farma Shop Dior",cajas:13120},{n:"Farma Util",cajas:24859},{n:"FarmaCon",cajas:41432},{n:"ICLINIC",cajas:1381},{n:"Triunfo",cajas:124297}];
 new Chart(document.getElementById('cLocalCajasT2'),{type:'bar',data:{labels:cajasLocalIIMuestra.map(l=>l.n),datasets:[{label:'Cajas/mes',data:cajasLocalIIMuestra.map(l=>l.cajas),backgroundColor:COLS.map(c=>c+'BB')}]},options:{...baseOpts(false),plugins:{datalabels:{...barDataLabels,formatter:v=>v.toLocaleString()}}}});
 const tomaTagII={'Cell Shopp':'<span class="badge-both">T.01 · T.02</span>','FarmaCon':'<span class="badge-t02">T.02</span>','Columbia':'<span class="badge-t02">T.02</span>','Farma Shop Dior':'<span class="badge-t02">T.02</span>','ICLINIC':'<span class="badge-t02">T.02</span>','Farma Util':'<span class="badge-t02">T.02</span>','Triunfo':'<span class="badge-both">T.01 · T.02</span>'};
 const localesII=[
-{n:"Cell Shopp",enc:35,cajas:28800,precio:80.4,br:91.4,estado:"Activo"},
-{n:"Columbia",enc:36,cajas:28800,precio:75.2,br:83.3,estado:"Activo"},
-{n:"Farma Shop Dior",enc:30,cajas:2280,precio:101.4,br:100,estado:"Activo"},
-{n:"Farma Util",enc:29,cajas:3600,precio:83.5,br:100,estado:"Activo"},
-{n:"FarmaCon",enc:35,cajas:6000,precio:81.6,br:94.3,estado:"Activo"},
-{n:"ICLINIC",enc:35,cajas:0,precio:82.3,br:88.6,estado:"Activo"},
-{n:"Triunfo",enc:27,cajas:36000,precio:83.3,br:100,estado:"Activo"}
+{n:"Cell Shopp",enc:35,cajas:165730,precio:80,br:91.4,estado:"Activo"},
+{n:"Columbia",enc:36,cajas:165730,precio:75,br:83.3,estado:"Activo"},
+{n:"Farma Shop Dior",enc:35,cajas:13120,precio:98,br:100,estado:"Activo"},
+{n:"Farma Util",enc:39,cajas:24859,precio:83,br:100,estado:"Activo"},
+{n:"FarmaCon",enc:35,cajas:41432,precio:82,br:94.3,estado:"Activo"},
+{n:"ICLINIC",enc:35,cajas:1381,precio:82,br:88.6,estado:"Activo"},
+{n:"Triunfo",enc:35,cajas:124297,precio:83,br:100,estado:"Activo"}
 ];
 const tbII=document.getElementById('tablaLocalesT2');tbII.innerHTML='';localesII.forEach(l=>{tbII.innerHTML+=`<tr><td class="name">${l.n} ${tomaTagII[l.n]||''}</td><td class="right num">${l.enc}</td><td class="right num">${l.cajas.toLocaleString('es-PY')}</td><td class="right num">${l.precio}</td><td class="right num">${l.br}%</td><td class="right"><span class="badge warn">${l.estado}</span></td>`;});
+
+// ===== MÓDULO C · EXTRAPOLACIÓN TOMA II — CARGAR VALORES AQUÍ =====
+const EXTRAP_T2 = {
+  visitas:   88200,        // clientes/mes (Visita clientes)
+  cajas:     536550,       // cajas/mes (Cajas por clientes / volumen)
+  ventas:    44736773,     // USD/mes (Total ventas)
+  ba:        "6,1",        // B/A cajas promedio por cliente
+  cb:        83            // C/B precio promedio por caja (USD)
+};
+(function renderExtrapT2(e){
+  const nf=n=>n.toLocaleString('es-PY');
+  const kCajas=Math.round(e.cajas/1000);
+  const factM=(e.ventas/1e6);
+  const cliK=(e.visitas/1000);
+  const set=(id,v)=>{const el=document.getElementById(id);if(el)el.textContent=v;};
+  set('ext-kpi-cajas', kCajas);
+  set('ext-vol', kCajas+'k');
+  set('ext-fact', 'USD '+factM.toLocaleString('es-PY',{maximumFractionDigits:1})+'M');
+  set('ext-cli', cliK.toLocaleString('es-PY',{maximumFractionDigits:1})+'k');
+  set('ext-visitas', nf(e.visitas));
+  set('ext-cajas', nf(e.cajas));
+  set('ext-ventas', 'USD '+nf(e.ventas));
+  set('ext-ba', e.ba);
+  set('ext-cb', 'USD '+e.cb);
+})(EXTRAP_T2);
 });
 </script>
 </body>
